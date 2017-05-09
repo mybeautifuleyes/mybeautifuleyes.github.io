@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Beautiful Eyes - a Photographs Album of us</title>
+
+	<!-- CSS includes -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]-->
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<!--[endif]-->
+
+	<style type="text/css">
+		body{
+			background: url(images/photo_background.jpg) no-repeat center center fixed;
+		}
+	</style>
+</head>
+<body>
+	<div style="margin-top:-50px">
+		<div class="container">
+			<div class="page-header" id="gallery">
+            	<h1 class="text-center text-success">PHOTOS VIEW<br /><a href="#model1" data-toggle="modal"><span class="fa fa-camera"></span></a></h1>
+            	<p class="text-center text-warning">点击相机图标用故事模式查看照片</p>
+            	<p class="text-center text-primary">点击图片可浏览原比例的照片</p>
+            	<p class="text-center text-success">点击查看原图可查看和下载高清的照片</p>
+        	</div>
+        	<div class="row container-gallery" id="photo-loader">
+        		
+        	</div>
+		</div>
+	</div>
+
+	<!-- Model -->
+	<div class="modal fade" id="model1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+    	<div class="modal-dialog">
+        	<div class="modal-content">
+            	<div class="modal-header">
+                	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                	<h1 class="text-center text-success"><span class="fa fa-camera"></span>  STORY</h1>
+            	</div>
+            	<div class="modal-body">
+            		<div class="text-center" id="story-loader">
+                	<iframe width="480" height="480" src="http://s430.photobucket.com/user/z7884922/embed/story"></iframe>
+            		</div>
+            	</div>
+        	</div>
+    	</div>
+	</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/jquery.mixitup.min.js"></script>
+<link href="css/magnific-popup.css" rel="stylesheet">
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/photos.js"></script>
+
+<script type="text/javascript">
+    jQuery(function($) {
+    	//load photos
+        load();
+
+        // Mix It Up Gallery and Magnific Popup setup
+        $('.container-gallery').mixItUp();
+        $('.container-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image'
+        });
+    });
+</script>
+
+</body>
