@@ -60,4 +60,5 @@ function init_album() {
     return album_html;
 }
 
-$("#album-content").html(init_album());
+// one second delay
+setTimeout('$("#album-content").html(init_album())', 1000);

@@ -36,9 +36,11 @@ function init_indicators(carousel, id) {
 function init_controls(id) {
     var controls_html =
         '<a class="left carousel-control" href="#' + id + '" role="button" data-slide="prev">' +
-        '<div class="carousel-control-arrow">&#8249;</div></a>' +
+        '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>' +
+        '<span class="sr-only">Previous</span></a>' +
         '<a class="right carousel-control" href="#' + id + '" role="button" data-slide="next">' +
-        '<div class="carousel-control-arrow">&#8250;</div></a>';
+        '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>' +
+        '<span class="sr-only">Next</span></a>';
     return controls_html;
 }
 

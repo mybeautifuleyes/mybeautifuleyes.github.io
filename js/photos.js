@@ -31,9 +31,9 @@ var album1 = {
             "美食",
             "校园",
             "校园",
-            "校园",
+            "校园"
             ]
-}
+};
 
 var album2 = {
     story : "",
@@ -217,9 +217,8 @@ function getUrlParams() {
 }
 
 var params = getUrlParams();
-var album = 1;
+var album = 0;
 if (params.length == 0 || params.hasOwnProperty('album') == false) {
-    alert('参数出错');
     location.href = "index.html";
 } else {
     album = params['album'];
