@@ -50,7 +50,7 @@ function init_slides(carousel){
     for (var i=0; i<carousel.length; i++){
         var item = (i==0)?'<div class="item active">':'<div class="item">';
         var caption = '<div class="carousel-caption"><p>' + carousel[i].content + '</p></div>';
-        slides_html += (item + '<img src="' + carousel[i].img + '" style="width:100%" />' + caption + '</div>');
+        slides_html += (item + '<img src="' + carousel[i].img + '" style="width: 100%;height: 100%;" />' + caption + '</div>');
     }
     slides_html += '</div>';
     return slides_html;

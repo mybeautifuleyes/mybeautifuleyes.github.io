@@ -14,12 +14,12 @@ gallery_imgs = [
     {"classify": "wind", "img": "http://opmpd352q.bkt.clouddn.com/gallery1.jpg"},
     {"classify": "wind", "img": "http://opmpd352q.bkt.clouddn.com/gallery2.jpg"},
     {"classify": "wind", "img": "http://opmpd352q.bkt.clouddn.com/gallery3.jpg"},
-    {"classify": "hometown", "img": "http://opmpd352q.bkt.clouddn.com/gallery4.jpg"},
-    {"classify": "field", "img": "http://opmpd352q.bkt.clouddn.com/gallery5.JPG"},
+    {"classify": "field", "img": "http://opmpd352q.bkt.clouddn.com/gallery4.jpg"},
+    {"classify": "hometown", "img": "http://opmpd352q.bkt.clouddn.com/gallery5.JPG"},
     {"classify": "mounting", "img": "http://opmpd352q.bkt.clouddn.com/gallery6.jpg"},
     {"classify": "mounting", "img": "http://opmpd352q.bkt.clouddn.com/gallery7.jpg"},
-    {"classify": "field", "img": "http://opmpd352q.bkt.clouddn.com/gallery8.jpg"},
-    {"classify": "hometown", "img": "http://opmpd352q.bkt.clouddn.com/gallery9.jpg"}
+    {"classify": "hometown", "img": "http://opmpd352q.bkt.clouddn.com/gallery8.jpg"},
+    {"classify": "field", "img": "http://opmpd352q.bkt.clouddn.com/gallery9.jpg"}
 ];
 
 function init_gallery(){
@@ -38,7 +38,7 @@ function init_gallery(){
     for (var i = 0; i < gallery_imgs.length; i++){
         gallery_html += '<div class="mix ' + gallery_imgs[i].classify + ' col-md-4 col-sm-6 col-xs-12">' +
             '<a href="' + gallery_imgs[i].img + '" class="img-wrapper">' +
-            '<img class="img-responsive" src="' + gallery_imgs[i].img + '" width="100%" />' +
+            '<img class="img-responsive" src="' + gallery_imgs[i].img + '" style="width: 100%;height: 100%;" />' +
             '</a></div>';
     }
     gallery_html += '</div>';
