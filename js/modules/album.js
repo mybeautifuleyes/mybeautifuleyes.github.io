@@ -26,7 +26,7 @@ album_imgs = [
 ];
 
 function init_album() {
-    var album_html = '<div class="col-md-4">';
+    var album_html = '<div class="col-md-4 col-sm-6 col-xs-12">';
     for (var i = 0; i < album_imgs.length; i+=3){
         album_html += '<div class="panel panel-default">' +
             '<div class="panel-body">' +
@@ -36,7 +36,7 @@ function init_album() {
             '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span> MORE</a></p>' +
             '</div></div>';
     }
-    album_html += '</div><div class="col-md-4">';
+    album_html += '</div><div class="col-md-4 col-sm-6 col-xs-12">';
     for (var i = 1; i < album_imgs.length; i+=3){
         album_html += '<div class="panel panel-default">' +
             '<div class="panel-body">' +
@@ -46,7 +46,7 @@ function init_album() {
             '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span>MORE</a></p>' +
             '</div></div>';
     }
-    album_html += '</div><div class="col-md-4">';
+    album_html += '</div><div class="col-md-4 col-sm-6 col-xs-12">';
     for (var i = 2; i < album_imgs.length; i+=3){
         album_html += '<div class="panel panel-default">' +
             '<div class="panel-body">' +

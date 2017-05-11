@@ -19,7 +19,7 @@
 
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- Local define css -->
 	<link href="css/theme.css" rel="stylesheet">
@@ -28,14 +28,13 @@
 <body>
 	<div style="margin-top:-50px">
 		<div class="container">
-			<div class="page-header">
-            	<h2 class="text-center text-success">PHOTOS VIEW<br /><span class="fa fa-camera"></span></h2>
+			<div class="page-header" style="margin-bottom: 0px">
+            	<h2 class="text-center text-success"><span class="fa fa-camera"></span> PHOTOS VIEW</h2>
         	</div>
-        	<div class="row container-gallery" id="photo-loader">
-				<div class="panel panel-default">
-
-				</div>
+        	<div class="row container-gallery" id="photo-loader" style="padding-top: 0px">
 			</div>
+			<hr>
+			<h3><a href="index.html"><span class="fa fa-hand-o-left"></span>BACK</a></h3>
 		</div>
 	</div>
 
@@ -59,9 +58,6 @@
 
 	<script type="text/javascript">
 		jQuery(function($) {
-			//load photos
-			load();
-
 			// Mix It Up Gallery and Magnific Popup setup
 			$('.container-gallery').mixItUp().magnificPopup({
 				delegate: 'a',
