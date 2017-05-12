@@ -6,7 +6,7 @@ album_imgs = [
     {
         "img": "http://opmpd352q.bkt.clouddn.com/front-1.jpg",
         "title": "摄影集",
-        "desc": "2013退休至今<br/>”秋风爽”摄影集之“世界那么大，不要停下你的脚步”<br/>天气：晴/雨/多云<br/>存放照片数：0<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+        "desc": "2013退休至今<br/>”秋风爽”摄影集之“世界那么大，不要停下你的脚步”<br/>天气：晴/雨/多云<br/>存放照片数：6<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
     },
     {
         "img": "http://opmpd352q.bkt.clouddn.com/front-2.jpg",

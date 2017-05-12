@@ -4,14 +4,14 @@
 
 comments = [
     {
-        "content": "This is the best site I've ever seen, excellent, perfect.",
-        "name": "李美丽",
-        "time": "14:23pm, 12 Jun 2017"
-    },
-    {
         "content": "好累，快被打败了",
         "name": "恬恬在奔跑",
         "time": "14:25pm, 12 Jun 2017"
+    },
+    {
+        "content": "This is the best site I've ever seen, excellent, perfect.",
+        "name": "李美丽",
+        "time": "14:26pm, 12 Jun 2017"
     },
     {
         "content": '好甜 <i class="fa fa-heart-o"></i>',
@@ -76,9 +76,32 @@ function remove_comment(){
     $comment.remove();
 }
 
-$.getJSON("http://10.121.84.90:1113/tag-comment/comments?callback=?",function(json){
+/*$.getJSON("http://10.121.84.90:1113/tag-comment/comments?callback=?",function(json){
     // get comments array, init comments
-});
+});*/
 
 $('#comment-section').html(init_comment());
 setInterval("add_comment(); setTimeout('remove_comment();', 1500)", 2500);
+
+
+function init_detail_comment(){
+    var comment_html = '';
+    for (var i=0; i<max_comment_count; i++){
+        if (comments[i].name == '李美丽')
+            comment_html += '<li class="commentLi commentstep-1">';
+        else
+            comment_html += '<li class="commentLi commentstep-1">';
+        comment_html += '<table class="form-comments-table">' +
+            '<tr><td><div class="comment-timestamp">' + comments[i].time + '</div></td>' +
+            '<td><div class="comment-user">' + comments[i].name + '</div></td>' +
+            '<td><div class="comment-avatar"><img src="' + comment_pic[i%5] + '"></div></td>' +
+            '<td><p class="comment-normal comment-step1">' + comments[i].content + '</p></td>' +
+            '</tr></table></li>';
+    }
+    return comment_html;
+}
+$('#detail-comment').html(init_detail_comment());
+
+$('#sendMessageButton').click(function (e) {
+   $('#message').html('<strong>评论功能暂未开放，等几天好不好<strong>');
+});
