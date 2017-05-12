@@ -76,10 +76,6 @@ function remove_comment(){
     $comment.remove();
 }
 
-/*$.getJSON("http://10.121.84.90:1113/tag-comment/comments?callback=?",function(json){
-    // get comments array, init comments
-});*/
-
 $('#comment-section').html(init_comment());
 setInterval("add_comment(); setTimeout('remove_comment();', 1500)", 2500);
 
