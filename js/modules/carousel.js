@@ -6,20 +6,13 @@
  * config carousel here
  * @type {*[]}
  */
-var carousel_1 = [
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-11.jpg", "content": '看不见你的笑我怎么睡得着'},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-12.jpg", "content": '载着你仿佛载着阳光，不管到哪里都是晴天'},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-13.jpg", "content": '爱是不是不开口才珍贵'},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-14.jpg", "content": '拯救地球好累'},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-15.jpg", "content": '天空仍灿烂，它爱着大海'}
-];
-
-var carousel_2 = [
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-21.jpg", "content": ''},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-22.jpg", "content": ''},
+var carousel = [
+    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-14.jpg", "content": '拯救地球好累，虽然有些疲惫但我还是会'},
     {"img": "http://opmpd352q.bkt.clouddn.com/carousel-23.jpg", "content": ''},
     {"img": "http://opmpd352q.bkt.clouddn.com/carousel-24.jpg", "content": ''},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-25.jpg", "content": ''}
+    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-12.jpg", "content": '载着你仿佛载着阳光，不管到哪里都是晴天'},
+    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-21.jpg", "content": ''},
+    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-22.jpg", "content": ''}
 ];
 
 function init_indicators(carousel, id) {
@@ -60,10 +53,6 @@ function init_slides(carousel){
  * init carousel here
  * @type {string}
  */
-var carousel_id_1 = 'theme-carousel-1';
-var carousel_html_1 = init_indicators(carousel_1, carousel_id_1) + init_slides(carousel_1) + init_controls(carousel_id_1);
-$('#' + carousel_id_1).html(carousel_html_1);
-
-var carousel_id_2 = 'theme-carousel-2';
-var carousel_html_2 = init_indicators(carousel_2, carousel_id_2) + init_slides(carousel_2) + init_controls(carousel_id_2);
-$('#' + carousel_id_2).html(carousel_html_2);
+var carousel_id = 'theme-carousel';
+var carousel_html = init_indicators(carousel, carousel_id) + init_slides(carousel) + init_controls(carousel_id);
+$('#' + carousel_id).html(carousel_html);
