@@ -1,3 +1,6 @@
+/**
+ * hot comment css
+*/
 .comment {
     overflow: hidden;
     padding: 0 0 1em;
@@ -89,3 +92,7 @@
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
 }
+
+/**
+ * normal comment css
+*/

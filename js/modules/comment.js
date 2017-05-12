@@ -38,11 +38,15 @@ comment_pic = [
     "http://opmpd352q.bkt.clouddn.com/comment_2.jpg"
 ];
 
+var init_comment_count = 3;
+var max_comment_count = comments.length;
+var current_comment_count = init_comment_count;
+
 function init_comment(){
     var comment_html = "";
-    for (var i=0; i<comments.length; i++){
+    for (var i=0; i<init_comment_count; i++){
         comment_html += '<article class="comment">' +
-            '<div class="comment-img"><img src="' + comment_pic[i%5] + '" width="50" height="50"></div>' +
+            '<div class="comment-img"><img src="' + comment_pic[i%5] + '" width="50" height="50" class="shake"></div>' +
             '<div class="comment-body">' +
             '<div class="text"><p>' + comments[i].content + '</p></div>' +
             '<p class="attribution">by <mark>' + comments[i].name + '</mark> at ' + comments[i].time + '</p>' +
@@ -51,4 +55,30 @@ function init_comment(){
     return comment_html;
 }
 
-$("#comment-section").html(init_comment());
+function add_comment(){
+    current_comment_count += 1;
+    if (current_comment_count > max_comment_count)
+        current_comment_count = 1;
+    var flag = current_comment_count - 1;
+
+    var comment_html = '<article class="comment">' +
+        '<div class="comment-img"><img src="' + comment_pic[flag%5] + '" width="50" height="50" class="shake"></div>' +
+        '<div class="comment-body">' +
+        '<div class="text"><p>' + comments[flag].content + '</p></div>' +
+        '<p class="attribution">by <mark>' + comments[flag].name + '</mark> at ' + comments[flag].time + '</p>' +
+        '</div></article>';
+
+    $(comment_html).appendTo($('#comment-section'));
+}
+
+function remove_comment(){
+    var $comment = $('#comment-section').find('.comment:first');
+    $comment.remove();
+}
+
+$.getJSON("http://10.121.84.90:1113/tag-comment/comments?callback=?",function(json){
+    // get comments array, init comments
+});
+
+$('#comment-section').html(init_comment());
+setInterval("add_comment(); setTimeout('remove_comment();', 1500)", 2500);
