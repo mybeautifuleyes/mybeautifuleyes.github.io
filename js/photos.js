@@ -98,6 +98,16 @@ var photos = [
     }
 ];
 
+var album_source_id = [
+    "daddy",
+    "samui",
+    "seoul",
+    "city",
+    "chuanchuan",
+    "xitang",
+    "jeju"
+];
+
 function getUrlParams() {
     var url = String(window.document.location.href);
     var params = {};
@@ -117,6 +127,9 @@ if (params.length == 0 || params.hasOwnProperty('album') == false) {
 } else {
     album = params['album'];
 }
+var source_id = album_source_id[parseInt(album) - 1];
+$comment = $('#SOHUCS');
+$comment.attr('sid', 'photo-' + source_id);
 
 function load(){
     if (photos[album-1].length == 0)
