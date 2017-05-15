@@ -38,7 +38,7 @@ comment_pic = [
     "http://opmpd352q.bkt.clouddn.com/comment_2.jpg"
 ];
 
-var init_comment_count = 4;
+var init_comment_count = 3;
 var max_comment_count = comments.length;
 var current_comment_count = init_comment_count;
 
@@ -80,6 +80,7 @@ $('#comment-section').html(init_comment());
 setInterval("add_comment(); remove_comment();", 2000);
 
 
+/*
 function init_detail_comment(){
     var comment_html = '';
     for (var i=0; i<max_comment_count; i++){
@@ -100,4 +101,4 @@ $('#detail-comment').html(init_detail_comment());
 
 $('#sendMessageButton').click(function (e) {
    $('#message').html('<strong>评论功能暂未开放，等几天好不好<strong>');
-});
+});*/
