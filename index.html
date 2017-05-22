@@ -19,9 +19,10 @@
     <link href="css/theme.css" rel="stylesheet">
     <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/comment.css" rel="stylesheet">
+    <link href="css/active-button.css" rel="stylesheet">
 
     <!-- css shake -->
-    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    <link rel="stylesheet" type="text/css" href="css/csshake.min.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -76,7 +77,12 @@
                 <div class="col-md-2 col-sm-2 col-xs-4">
                     <div class="panel panel-warning shake-slow">
                         <div class="panel-body shake-slow shake-constant shake-constant--hover">
-                            <img src="http://opmpd352q.bkt.clouddn.com/about_1.jpg" class="img-responsive" style="width: 100%;height: 100%;" />
+                            <img data-original="http://opmpd352q.bkt.clouddn.com/about_1.jpg" class="lazy img-responsive" style="width: 100%;height: 100%;" />
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-body shake-slow">
+                            <img data-original="http://opmpd352q.bkt.clouddn.com/about_2.jpg" class="lazy img-responsive" style="width: 100%;height: 100%;" />
                         </div>
                     </div>
                 </div>
@@ -86,32 +92,72 @@
                         <li><ins>PHOTO ALBUM</ins>是被分类的照片集合</li>
                         <li><ins>GALLERY</ins>会定期更换不同主题的照片</li>
                     </ul>
-					<p><mark>有一些不为人知的秘密：</mark></p>
+					<p><strong>有一些不为人知的秘密：</strong></p>
 					<ul>
 						<li><strong><mark>5月22日更新：摄影集+2</mark></strong></li>
 						<li>旁边的这只猫大名<strong>李美丽</strong>、小名雪糕、外号傻猫</li>
-                        <li>这个网站，用电脑浏览器打开，比手机浏览器好看一万倍；为了能让你们更舒服的访问这个网站，为了适应手机的屏幕尺寸，我已经<mark>拼尽全力</mark>了...</li>
+                        <li>这个网站，用电脑浏览器打开，比手机浏览器好看一万倍...</li>
 						<li>评论功能开放了，大家可以愉快的在页面上跟我互动了...</li>
-                        <li>接下来要做一个“照片点赞”功能</li>
+                    </ul>
+                    <p><strong>好物推荐</strong></p>
+                    <ul>
+                        <li><span class="fa fa-heart-o"></span><a href="http://www.paperang.cn/" target="_blank"> 申十七推荐：喵喵机</a></li>
+                        <li><span class="fa fa-heart-o"></span><a href="http://c.b0yp.com/h.TFaVBM?cv=EXThZGrxuFc&sm=c94703" target="_blank"> 世界这么大 带你吃遍它</a></li>
+                        <li><span class="fa fa-heart-o"></span><a href="http://www.reflower.com.cn/" target="_blank"> 花点时间：每周一花的小幸福</a></li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-4">
-                    <div class="panel panel-warning">
-                        <div class="panel-body shake-slow">
-                            <img src="http://opmpd352q.bkt.clouddn.com/about_2.jpg" class="img-responsive" style="width: 100%;height: 100%;" />
-                        </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 text-justify">
+
+                    <div class="row" style="font: normal 20px/30px Arial, sans-serif; margin-bottom: 15px">
+                        <p style="height: 30px; float: left; margin-right: 0.3em;">这是一个</p>
+                        <b style="float: left; overflow: hidden; position: relative; height: 30px">
+                            <span class="title-span">
+                                神奇的网站<br />
+                                李美丽的主页<br />
+                                程序员小哥哥无聊时期的产物<br />
+                                朋友圈不敢装的逼可以在这里装
+                            </span>
+                        </b>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-8 text-justify">
-                    <p>
-                        <span class="fa fa-heart-o"></span><a href="http://www.paperang.cn/" target="_blank"> 申十七推荐：喵喵机</a>
-                    </p>
-                    <p>
-                        <span class="fa fa-heart-o"></span><a href="http://c.b0yp.com/h.TFaVBM?cv=EXThZGrxuFc&sm=c94703" target="_blank"> 世界这么大 带你吃遍它</a>
-                    </p>
-                    <p>
-                        <span class="fa fa-heart-o"></span><a href="http://www.reflower.com.cn/" target="_blank"> 花点时间：每周一花的小幸福</a>
-                    </p>
+
+                    <section class="comments">
+                        <article class="comment">
+                            <div class="comment-img">
+                                <button type="button" class="btn btn-primary btn-circle btn-lg">
+                                    <i class="fa fa-space-shuttle faa-passing animated"></i>
+                                </button>
+                            </div>
+                            <div class="comment-body">
+                                <div class="text"><p>
+                                    2017.05.23, 页面图片采用Lazy Load的加载方式，优化访问速度
+                                </p></div>
+                            </div>
+                        </article>
+                        <article class="comment">
+                            <div class="comment-img">
+                                <button type="button" class="btn btn-warning btn-circle btn-lg">
+                                    <i class="fa fa-commenting-o faa-shake animated"></i>
+                                </button>
+                            </div>
+                            <div class="comment-body">
+                                <div class="text"><p>
+                                    2017.05.15, 评论系统开发完成并开放
+                                </p></div>
+                            </div>
+                        </article>
+                        <article class="comment">
+                            <div class="comment-img">
+                                <button type="button" class="btn btn-success btn-circle btn-lg">
+                                    <i class="fa fa-heart faa-pulse animated"></i>
+                                </button>
+                            </div>
+                            <div class="comment-body">
+                                <div class="text"><p>
+                                    2017.05.12, 网站上线并更换域名，使用国内服务云存储照片，自适应手机尺寸
+                                </p></div>
+                            </div>
+                        </article>
+                    </section>
                 </div>
             </div>
         </div>
@@ -124,7 +170,17 @@
             <div class="page-header">
                 <h2 class="text-center text-danger"><span class="fa fa-paint-brush"></span> PHOTO ALBUM</h2>
             </div>
-            <div id="album-content"><h3 class="text-center">LOADING</h3></div>
+            <div id="album-content">
+                <h3 class="text-center text-danger">Waiting to a beautiful show!</h3>
+                <div id="loading">
+                    <ul class="bokeh">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="clearfix hidden-xs" style="width:100%; height:50px;"></div>
     </div>
@@ -151,14 +207,14 @@
                 <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="panel">
                         <div class="panel-body">
-                            <img src="http://opmpd352q.bkt.clouddn.com/contact_1.png" class="img-responsive" />
+                            <img data-original="http://opmpd352q.bkt.clouddn.com/contact_1.png" class="lazy img-responsive" />
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="panel">
                         <div class="panel-body">
-                            <img src="http://opmpd352q.bkt.clouddn.com/contact_2.png" class="img-responsive" />
+                            <img data-original="http://opmpd352q.bkt.clouddn.com/contact_2.png" class="lazy img-responsive" />
                         </div>
                     </div>
                 </div>
@@ -210,6 +266,9 @@
     <!-- bootstrap -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <!-- lazyload -->
+    <script src="js/jquery.lazyload.js"></script>
+
     <!-- local define -->
     <script src="js/jquery.mixitup.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -227,6 +286,12 @@
             $('.container-gallery').mixItUp().magnificPopup({
                 delegate: 'a',
                 type: 'image'
+            });
+
+            // Lazy load
+            $("img.lazy").lazyload({
+                threshold : 200,
+                effect : "fadeIn"
             });
         });
         (function(){

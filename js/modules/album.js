@@ -45,7 +45,7 @@ function init_album() {
     for (var i = 0; i < album_imgs.length; i+=3){
         album_html += '<div class="panel panel-default">' +
             '<div class="panel-body">' +
-            '<img src="' + album_imgs[i].img + '" class="img-responsive" style="width: 100%;height: 100%;"/>' +
+            '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" width="640" height="480"/>' +
             '<h3>' + album_imgs[i].title + '</h3>' +
             '<p>' + album_imgs[i].desc + '</p>' +
             '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span> MORE</a></p>' +
@@ -55,7 +55,7 @@ function init_album() {
     for (var i = 1; i < album_imgs.length; i+=3){
         album_html += '<div class="panel panel-default">' +
             '<div class="panel-body">' +
-            '<img src="' + album_imgs[i].img + '" class="img-responsive" style="width: 100%;height: 100%;"/>' +
+            '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
             '<h3>' + album_imgs[i].title + '</h3>' +
             '<p>' + album_imgs[i].desc + '</p>' +
             '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span>MORE</a></p>' +
@@ -65,7 +65,7 @@ function init_album() {
     for (var i = 2; i < album_imgs.length; i+=3){
         album_html += '<div class="panel panel-default">' +
             '<div class="panel-body">' +
-            '<img src="' + album_imgs[i].img + '" class="img-responsive" style="width: 100%;height: 100%;"/>' +
+            '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
             '<h3>' + album_imgs[i].title + '</h3>' +
             '<p>' + album_imgs[i].desc + '</p>' +
             '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span>MORE</a></p>' +
@@ -75,5 +75,6 @@ function init_album() {
     return album_html;
 }
 
-// one second delay
-setTimeout('$("#album-content").html(init_album())', 1000);
+setTimeout(function() {
+    $("#album-content").html(init_album());
+},3000);

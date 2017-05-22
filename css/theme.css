@@ -6839,15 +6839,16 @@ body {
 }
 
 .container-projects {
-	width: 100%;
-	display: inline-block;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	background: url(http://opmpd352q.bkt.clouddn.com/photo_background.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+  width: 100%;
+  min-height: 300px;
+  display: inline-block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: url(http://opmpd352q.bkt.clouddn.com/photo_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .container-gallery {
@@ -6949,4 +6950,123 @@ a.footer-socialicon {
 .panel-heading {
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
+}
+
+/* timeline title */
+.title-span {
+  display: inline-block;
+  color: #e74c3c;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  -webkit-animation: move 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+}
+
+@keyframes move {
+  0%  { top: 0px; }
+  20% { top: -30px; }
+  40% { top: -60px; }
+  60% { top: -90px; }
+  80% { top: -120px; }
+}
+
+/* album loading */
+#loading {
+  height: 100%;
+  left: 0;
+  margin: 40px auto auto;
+  width: 100%;
+}
+.bokeh {
+  border: 0.01em solid rgba(150, 150, 150, 0.1);
+  border-radius: 50%;
+  font-size: 100px;
+  height: 1em;
+  list-style: outside none none;
+  margin: 0 auto;
+  position: relative;
+  top: 35%;
+  width: 1em;
+  z-index: 2147483647;
+}
+.bokeh li {
+  border-radius: 50%;
+  height: 0.2em;
+  position: absolute;
+  width: 0.2em;
+}
+.bokeh li:nth-child(1) {
+  animation: 1.13s linear 0s normal none infinite running rota, 3.67s ease-in-out 0s alternate none infinite running opa;
+  background: #00c176 none repeat scroll 0 0;
+  left: 50%;
+  margin: 0 0 0 -0.1em;
+  top: 0;
+  transform-origin: 50% 250% 0;
+}
+.bokeh li:nth-child(2) {
+  animation: 1.86s linear 0s normal none infinite running rota, 4.29s ease-in-out 0s alternate none infinite running opa;
+  background: #ff003c none repeat scroll 0 0;
+  margin: -0.1em 0 0;
+  right: 0;
+  top: 50%;
+  transform-origin: -150% 50% 0;
+}
+.bokeh li:nth-child(3) {
+  animation: 1.45s linear 0s normal none infinite running rota, 5.12s ease-in-out 0s alternate none infinite running opa;
+  background: #fabe28 none repeat scroll 0 0;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 0 -0.1em;
+  transform-origin: 50% -150% 0;
+}
+.bokeh li:nth-child(4) {
+  animation: 1.72s linear 0s normal none infinite running rota, 5.25s ease-in-out 0s alternate none infinite running opa;
+  background: #88c100 none repeat scroll 0 0;
+  margin: -0.1em 0 0;
+  top: 50%;
+  transform-origin: 250% 50% 0;
+}
+@keyframes opa {
+  12% {
+    opacity: 0.8;
+  }
+  19.5% {
+    opacity: 0.88;
+  }
+  37.2% {
+    opacity: 0.64;
+  }
+  40.5% {
+    opacity: 0.52;
+  }
+  52.7% {
+    opacity: 0.69;
+  }
+  60.2% {
+    opacity: 0.6;
+  }
+  66.6% {
+    opacity: 0.52;
+  }
+  70% {
+    opacity: 0.63;
+  }
+  79.9% {
+    opacity: 0.6;
+  }
+  84.2% {
+    opacity: 0.75;
+  }
+  91% {
+    opacity: 0.87;
+  }
+}
+
+@keyframes rota {
+  100% {
+    transform: rotate(360deg);
+  }
 }
