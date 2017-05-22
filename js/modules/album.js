@@ -40,41 +40,73 @@ album_imgs = [
     }
 ];
 
-function init_album() {
-    var album_html = '<div class="col-md-4 col-sm-6 col-xs-12">';
-    for (var i = 0; i < album_imgs.length; i+=3){
-        album_html += '<div class="panel panel-default">' +
+var $album1 = $('#album-col-1');
+var $album2 = $('#album-col-2');
+var $album3 = $('#album-col-3');
+function init_album(current_row) {
+    var i = current_row;
+    var album_html1 = '<div class="panel panel-default">' +
             '<div class="panel-body">' +
-            '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" width="640" height="480"/>' +
+            '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
             '<h3>' + album_imgs[i].title + '</h3>' +
             '<p>' + album_imgs[i].desc + '</p>' +
             '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span> MORE</a></p>' +
             '</div></div>';
-    }
-    album_html += '</div><div class="col-md-4 col-sm-6 col-xs-12">';
-    for (var i = 1; i < album_imgs.length; i+=3){
-        album_html += '<div class="panel panel-default">' +
-            '<div class="panel-body">' +
-            '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
-            '<h3>' + album_imgs[i].title + '</h3>' +
-            '<p>' + album_imgs[i].desc + '</p>' +
-            '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span>MORE</a></p>' +
-            '</div></div>';
-    }
-    album_html += '</div><div class="col-md-4 col-sm-6 col-xs-12">';
-    for (var i = 2; i < album_imgs.length; i+=3){
-        album_html += '<div class="panel panel-default">' +
-            '<div class="panel-body">' +
-            '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
-            '<h3>' + album_imgs[i].title + '</h3>' +
-            '<p>' + album_imgs[i].desc + '</p>' +
-            '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span>MORE</a></p>' +
-            '</div></div>';
-    }
-    album_html += '</div>';
-    return album_html;
+    $album1.html($album1.html() + album_html1);
+
+    i += 1;
+    if (i >= album_imgs.length)
+        return;
+    var album_html2 = '<div class="panel panel-default">' +
+        '<div class="panel-body">' +
+        '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
+        '<h3>' + album_imgs[i].title + '</h3>' +
+        '<p>' + album_imgs[i].desc + '</p>' +
+        '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span>MORE</a></p>' +
+        '</div></div>';
+    $album2.html($album2.html() + album_html2);
+
+    i += 1;
+    if (i >= album_imgs.length)
+        return;
+    var album_html3 = '<div class="panel panel-default">' +
+        '<div class="panel-body">' +
+        '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
+        '<h3>' + album_imgs[i].title + '</h3>' +
+        '<p>' + album_imgs[i].desc + '</p>' +
+        '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span>MORE</a></p>' +
+        '</div></div>';
+    $album3.html($album3.html() + album_html3);
 }
 
-setTimeout(function() {
-    $("#album-content").html(init_album());
-},3000);
+var is_show_album = 0;
+function call_show_album(){
+    var dom_top = parseInt($('#album-content').position().top);
+    var window_height = parseInt($(window).height());
+    var scroll_top = parseInt($(window).scrollTop());
+
+    // up_down_show = [0, window_height-30]
+    var up_down_show = dom_top - scroll_top;
+
+    if (up_down_show > 0 && up_down_show < window_height-30 && is_show_album === 0){
+        is_show_album = 1;
+        // $(window).off("scroll");
+        $(window).off("resize");
+        setTimeout(function () {
+            for (var row = 0; row < album_imgs.length; row += 3){
+                init_album(row);
+            }
+            $('#album-loading').fadeOut(1000, function () {
+                $('.album-panel-col').slideDown(2000);
+            });
+        }, 1500);
+    }
+}
+
+$(window).on("scroll", function () {
+    call_show_album();
+});
+
+$(window).on("resize", function () {
+    call_show_album();
+});

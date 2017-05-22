@@ -107,7 +107,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 text-justify">
-
+                    <!-- time line title -->
                     <div class="row" style="font: normal 20px/30px Arial, sans-serif; margin-bottom: 15px">
                         <p style="height: 30px; float: left; margin-right: 0.3em;">这是一个</p>
                         <b style="float: left; overflow: hidden; position: relative; height: 30px">
@@ -119,7 +119,7 @@
                             </span>
                         </b>
                     </div>
-
+                    <!-- time line -->
                     <section class="comments">
                         <article class="comment">
                             <div class="comment-img">
@@ -171,14 +171,21 @@
                 <h2 class="text-center text-danger"><span class="fa fa-paint-brush"></span> PHOTO ALBUM</h2>
             </div>
             <div id="album-content">
-                <h3 class="text-center text-danger">Waiting to a beautiful show!</h3>
-                <div id="loading">
-                    <ul class="bokeh">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 album-panel-col" id="album-col-1" hidden></div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 album-panel-col" id="album-col-2" hidden></div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 album-panel-col" id="album-col-3" hidden></div>
+                </div>
+                <div id="album-loading" class="row">
+                    <h3 class="text-center text-danger">Waiting to a beautiful show!</h3>
+                    <div id="loading">
+                        <ul class="bokeh">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -293,7 +300,9 @@
                 threshold : 200,
                 effect : "fadeIn"
             });
-        });
+
+            });
+
         (function(){
             var appid = 'cyt0RkGlD';
             var conf = 'prod_c450013909ca7a621306edf50f9d1a2b';
