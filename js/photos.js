@@ -135,52 +135,34 @@ var source_id = album_source_id[parseInt(album) - 1];
 $comment = $('#SOHUCS');
 $comment.attr('sid', 'photo-' + source_id);
 
-function load(){
-    if (photos[album-1].length == 0)
-        return "";
+var $photo = [
+    $('#photo-col-1'), $('#photo-col-2'), $('#photo-col-3')
+];
+function init_normal_style_photo(current_row){
+    var i = current_row;
+    function init_html(i){
+        var photo_html = '<div class="panel" style="margin-bottom: 1px">' +
+            '<div class="mix">' +
+            '<a href="' + photos[album-1].img[i] + '" class="img-wrapper">' +
+            '<img src="' + photos[album-1].img[i] + '" class="img-responsive" style="width: 100%;height: 100%;"/>' +
+            '</a></div>';
+        if (photos[album-1].comment[i] != "" && photos[album-1].comment[i] != null)
+            photo_html += '<p><i class="fa fa-hand-peace-o"></i> ' + photos[album-1].comment[i] + '</p></div>';
+        else
+            photo_html += '</div>';
+        return photo_html;
+    }
 
-    var photo_html = '<div class="col-md-4 col-sm-4 col-xs-12">';
-    var length = photos[album-1].img.length;
-    for (var i=0; i<length; i+=3){
-        photo_html += '<div class="panel" style="margin-bottom: 1px">' +
-            '<div class="mix">' +
-            '<a href="' + photos[album-1].img[i] + '" class="img-wrapper">' +
-            '<img src="' + photos[album-1].img[i] + '" class="img-responsive" style="width: 100%;height: 100%;"/>' +
-            '</a></div>';
-        if (photos[album-1].comment[i] != "" && photos[album-1].comment[i] != null)
-            photo_html += '<p><i class="fa fa-hand-peace-o"></i> ' + photos[album-1].comment[i] + '</p></div>';
-        else
-            photo_html += '</div>';
+    for (var current_photo = 0; current_photo < 3; current_photo ++) {
+        $photo[current_photo].html($photo[current_photo].html() + init_html(i));
+        i += 1;
+        if (i == photos[album-1].img.length)
+            break;
     }
-    photo_html += '</div><div class="col-md-4 col-sm-4 col-xs-12">';
-    for (var i=1; i<length; i+=3){
-        photo_html += '<div class="panel" style="margin-bottom: 1px">' +
-            '<div class="mix">' +
-            '<a href="' + photos[album-1].img[i] + '" class="img-wrapper">' +
-            '<img src="' + photos[album-1].img[i] + '" class="img-responsive" style="width: 100%;height: 100%;"/>' +
-            '</a></div>';
-        if (photos[album-1].comment[i] != "" && photos[album-1].comment[i] != null)
-            photo_html += '<p><i class="fa fa-hand-peace-o"></i> ' + photos[album-1].comment[i] + '</p></div>';
-        else
-            photo_html += '</div>';
-    }
-    photo_html += '</div><div class="col-md-4 col-sm-4 col-xs-12">';
-    for (var i=2; i<length; i+=3){
-        photo_html += '<div class="panel" style="margin-bottom: 1px">' +
-            '<div class="mix">' +
-            '<a href="' + photos[album-1].img[i] + '" class="img-wrapper">' +
-            '<img src="' + photos[album-1].img[i] + '" class="img-responsive" style="width: 100%;height: 100%;"/>' +
-            '</a></div>';
-        if (photos[album-1].comment[i] != "" && photos[album-1].comment[i] != null)
-            photo_html += '<p><i class="fa fa-hand-peace-o"></i> ' + photos[album-1].comment[i] + '</p></div>';
-        else
-            photo_html += '</div>';
-    }
-    photo_html += '</div>';
-    return photo_html;
 }
 
-$("#photo-loader").html(load());
+for (var row = 0; row < photos[album-1].img.length; row+=3)
+    $("#photo-loader").html(init_normal_style_photo(row));
 
 
 

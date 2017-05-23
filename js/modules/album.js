@@ -91,7 +91,7 @@ function call_show_album(){
     if (up_down_show > 0 && up_down_show < window_height-30 && is_show_album === 0){
         is_show_album = 1;
         // $(window).off("scroll");
-        $(window).off("resize");
+        //$(window).off("resize");
         setTimeout(function () {
             for (var row = 0; row < album_imgs.length; row += 3){
                 init_album(row);
@@ -102,11 +102,3 @@ function call_show_album(){
         }, 1500);
     }
 }
-
-$(window).on("scroll", function () {
-    call_show_album();
-});
-
-$(window).on("resize", function () {
-    call_show_album();
-});

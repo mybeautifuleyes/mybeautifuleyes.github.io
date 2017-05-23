@@ -301,8 +301,18 @@
                 effect : "fadeIn"
             });
 
+            // event monitor
+            $(window).on("scroll", function () {
+                call_show_album();
             });
 
+            $(window).on("resize", function () {
+                call_show_album();
+            });
+
+        });
+
+        // load comment
         (function(){
             var appid = 'cyt0RkGlD';
             var conf = 'prod_c450013909ca7a621306edf50f9d1a2b';
