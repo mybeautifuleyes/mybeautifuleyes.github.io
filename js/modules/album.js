@@ -40,43 +40,28 @@ album_imgs = [
     }
 ];
 
-var $album1 = $('#album-col-1');
-var $album2 = $('#album-col-2');
-var $album3 = $('#album-col-3');
+var $album = [
+    $('#album-col-1'), $('#album-col-2'), $('#album-col-3')
+];
 function init_album(current_row) {
     var i = current_row;
-    var album_html1 = '<div class="panel panel-default">' +
+    function init_html(i) {
+        var album_html = '<div class="panel panel-default">' +
             '<div class="panel-body">' +
             '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
             '<h3>' + album_imgs[i].title + '</h3>' +
             '<p>' + album_imgs[i].desc + '</p>' +
             '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span> MORE</a></p>' +
             '</div></div>';
-    $album1.html($album1.html() + album_html1);
+        return album_html;
+    }
 
-    i += 1;
-    if (i >= album_imgs.length)
-        return;
-    var album_html2 = '<div class="panel panel-default">' +
-        '<div class="panel-body">' +
-        '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
-        '<h3>' + album_imgs[i].title + '</h3>' +
-        '<p>' + album_imgs[i].desc + '</p>' +
-        '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span>MORE</a></p>' +
-        '</div></div>';
-    $album2.html($album2.html() + album_html2);
-
-    i += 1;
-    if (i >= album_imgs.length)
-        return;
-    var album_html3 = '<div class="panel panel-default">' +
-        '<div class="panel-body">' +
-        '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
-        '<h3>' + album_imgs[i].title + '</h3>' +
-        '<p>' + album_imgs[i].desc + '</p>' +
-        '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span>MORE</a></p>' +
-        '</div></div>';
-    $album3.html($album3.html() + album_html3);
+    for (var current_album = 0; current_album < 3; current_album ++){
+        $album[current_album].html($album[current_album].html() + init_html(i));
+        i += 1;
+        if (i >= album_imgs.length)
+            break;
+    }
 }
 
 var is_show_album = 0;

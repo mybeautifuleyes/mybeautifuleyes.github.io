@@ -46,4 +46,24 @@ function init_gallery(){
     return gallery_html;
 }
 
-$("#gallery-content").html(init_gallery());
+var is_show_gallery = 0;
+function call_show_gallery(){
+    var gallery_dom_top = parseInt($('#gallery-content').position().top);
+    var window_height = parseInt($(window).height());
+    var scroll_top = parseInt($(window).scrollTop());
+
+    // up_down_show = [0, window_height-100]
+    var up_down_show = gallery_dom_top - scroll_top;
+    if (up_down_show > 0 && up_down_show < window_height-100 && is_show_gallery === 0){
+        is_show_gallery = 1;
+        setTimeout(function () {
+            $('#gallery-loading').fadeOut(1000, function () {
+                $("#gallery-content").html(init_gallery());
+                $('.container-gallery').mixItUp().magnificPopup({
+                    delegate: 'a',
+                    type: 'image'
+                });
+            });
+        }, 1500);
+    }
+}

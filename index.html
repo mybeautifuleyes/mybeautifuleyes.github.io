@@ -178,7 +178,7 @@
                 </div>
                 <div id="album-loading" class="row">
                     <h3 class="text-center text-danger">Waiting to a beautiful show!</h3>
-                    <div id="loading">
+                    <div>
                         <ul class="bokeh">
                             <li></li>
                             <li></li>
@@ -199,7 +199,19 @@
                 <h2 class="text-center text-success"><span class="fa fa-camera"></span> GALLERY</h2>
                 <p class="text-center text-success">照片出自：平乐民间摄影师----秋风爽</p>
             </div>
-            <div id="gallery-content"></div>
+            <div id="gallery-content">
+                <div id="gallery-loading" class="row">
+                    <h3 class="text-center text-success">Waiting to a beautiful show!</h3>
+                    <div>
+                        <ul class="bokeh">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="clearfix hidden-xs" style="width:100%; height:50px;"></div>
     </div>
@@ -290,10 +302,7 @@
     <script type="text/javascript">
         jQuery(function($) {
             // Mix It Up Gallery and Magnific Popup setup
-            $('.container-gallery').mixItUp().magnificPopup({
-                delegate: 'a',
-                type: 'image'
-            });
+
 
             // Lazy load
             $("img.lazy").lazyload({
@@ -304,10 +313,12 @@
             // event monitor
             $(window).on("scroll", function () {
                 call_show_album();
+                call_show_gallery();
             });
 
             $(window).on("resize", function () {
                 call_show_album();
+                call_show_gallery();
             });
 
         });
