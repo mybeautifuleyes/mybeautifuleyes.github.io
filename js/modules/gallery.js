@@ -59,6 +59,7 @@ function call_show_gallery(){
         setTimeout(function () {
             $('#gallery-loading').fadeOut(1000, function () {
                 $("#gallery-content").html(init_gallery());
+                // Mix It Up Gallery and Magnific Popup setup
                 $('.container-gallery').mixItUp().magnificPopup({
                     delegate: 'a',
                     type: 'image'
