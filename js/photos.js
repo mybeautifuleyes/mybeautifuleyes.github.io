@@ -31,7 +31,8 @@ var photos = [
 		],
         "comment": [
 			"wedding door games",
-			""
+			"",
+            ""
 		]
     },
     {
