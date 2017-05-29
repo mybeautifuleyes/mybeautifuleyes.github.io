@@ -17,137 +17,35 @@
 	<!-- Local define css -->
 	<link href="css/theme.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/active-button.css" rel="stylesheet">
 
-	<!-- CSS includes -->
-	<style type="text/css">
-		body{
-			height: 100%;
-			background: url(http://opmpd352q.bkt.clouddn.com/background_2.jpg) no-repeat right bottom fixed;
-			position: relative;
-			padding-top: 10px;
-		}
-
-		#particles-js{
-			width: 100%;
-			height: 100%;
-			background-size: cover;
-			background-position: 50% 50%;
-			position: fixed;
-			top: 0;
-			z-index:1;
-		}
-
-		.cuadro_intro_hover{
-			padding: 0;
-			position: relative;
-			height: 100%;
-			z-index: 3;
-		}
-		.cuadro_intro_hover:hover .caption{
-			opacity: 1;
-			
-			transform: translateY(-100px);
-			-webkit-transform:translateY(-100px);
-			-moz-transform:translateY(-100px);
-			-ms-transform:translateY(-100px);
-			-o-transform:translateY(-100px);
-			
-			transition: transform 1s ease-in 0s, opacity 1s ease 0s;
-			-moz-transition: -moz-transform 1s ease 0s, opacity 1s ease 0s;
-			-webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s;
-			-o-transition: -o-transform 1s ease 0s, opacity 1s ease 0s;
-			-ms-transition: -ms-transform 1s ease 0s, opacity 1s ease 0s;
-		}
-		.cuadro_intro_hover img{
-			z-index: 4;
-		}
-		.cuadro_intro_hover .caption{
-			opacity: 0;
-			position: absolute;
-			/*bottom:100px;*/
-			-webkit-transition:all 0.3s ease-in-out;
-			-moz-transition:all 0.3s ease-in-out;
-			-o-transition:all 0.3s ease-in-out;
-			-ms-transition:all 0.3s ease-in-out;
-			transition:all 0.3s ease-in-out;
-			width: 100%;
-		}
-		.cuadro_intro_hover .blur{
-			background-color: rgba(0,0,0,0.7);
-			height: 100px;
-			z-index: 5;
-			position: absolute;
-			width: 100%;
-		}
-		.cuadro_intro_hover .caption-text{
-			z-index: 6;
-			color: #fff;
-			position: absolute;
-			height: 100px;
-			text-align: center;
-			width: 100%;
-		}
-	</style>
+	<!-- photo css must be at last -->
+	<link href="css/photo.css" rel="stylesheet">
 </head>
 <body>
-
-	<div>
-		<div class="container">
-			<div class="page-header row">
-				<div class="col-md-6 col-sm-6 col-xs-6">
-					<h3 class="text-success"><span class="fa fa-photo"></span> PHOTOS (TESTING) </h3>
-					<h4 class="text-warning">(fab, comment and enjoy)</h4>
-				</div>
-				<div class="col-md-6 col-sm-6 col-xs-6" style="z-index: 2;">
-					<h4 class="text-right" style="padding-top: 35px">
-						<a href="index.html"><span class="fa fa-hand-o-left"></span> BACK</a>
-					</h4>
-				</div>
+	<div class="container">
+		<div class="page-header row">
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<h3 class="text-success"><span class="fa fa-photo"></span> PHOTOS </h3>
+				<h4 class="text-warning">(fab, comment and enjoy)</h4>
 			</div>
-
-			<!-- photos -->
-        	<div class="row container-gallery" id="photo-loader" style="padding-top: 0">
-				<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-1" style="z-index: 2">
-					<div class="panel" style="margin-bottom: 1px">
-						<div class="mix">
-							<a href="http://opmpd352q.bkt.clouddn.com/album-4-1.jpg" class="img-wrapper">
-								<img src="http://opmpd352q.bkt.clouddn.com/album-4-1.jpg" class="img-responsive" style="width: 100%;height: 100%;"/>
-							</a>
-							<p><i class="fa fa-hand-peace-o"></i>
-								上海<br/>消失的旧时光一九四三 回头看的片段有一些风霜<br/>老唱盘旧皮箱 装满了明信片的铁盒里藏着一片玫瑰花瓣
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-2" style="z-index: 2">
-					<div class="panel" style="margin-bottom: 1px">
-						<div class="cuadro_intro_hover">
-							<div class="mix">
-								<a href="http://opmpd352q.bkt.clouddn.com/album-4-1.jpg" class="img-wrapper">
-									<img src="http://opmpd352q.bkt.clouddn.com/album-4-1.jpg" class="img-responsive" style="width: 100%;height: 100%;"/>
-								</a>
-								<p><i class="fa fa-hand-peace-o"></i>
-									上海<br/>消失的旧时光一九四三 回头看的片段有一些风霜<br/>老唱盘旧皮箱 装满了明信片的铁盒里藏着一片玫瑰花瓣
-								</p>
-							</div>
-
-							<div class="caption">
-								<div class="blur"></div>
-								<div class="caption-text">
-									<a class=" btn btn-default" href="https://plus.google.com/u/0/100371904807783155711/posts" target="_blank"><span class="glyphicon glyphicon-plus"> INFO</span></a>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-3" style="z-index: 2"></div>
+			<div class="col-md-6 col-sm-6 col-xs-6" style="z-index: 2;">
+				<h4 class="text-right" style="padding-top: 35px">
+					<a href="index.html"><span class="fa fa-hand-o-left"></span> BACK</a>
+				</h4>
 			</div>
+		</div>
+
+		<!-- photos -->
+		<div class="row container-gallery" id="photo-loader" style="padding-top: 0">
+			<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-1" style="z-index: 2"></div>
+			<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-2" style="z-index: 2"></div>
+			<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-3" style="z-index: 2"></div>
+		</div>
 
 			<!-- comment -->
 			<div id="SOHUCS" sid="photos"></div>
 		</div>
-	</div>
 
 	<div id="particles-js"></div>
 
@@ -166,8 +64,8 @@
 	<!-- local define -->
 	<script src="js/jquery.mixitup.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
-	<!--<script src="js/theme.js"></script>-->
-	<!--<script src="js/photos.js"></script>-->
+	<script src="js/common-data.js"></script>
+	<script src="js/photos.js"></script>
 
 	<script type="text/javascript">
 		jQuery(function($) {

@@ -2,26 +2,6 @@
  * Created by liye on 2017/5/9.
  */
 
-gallery_classify = [
-    "all",
-    "wind",
-    "hometown",
-    "field",
-    "mounting"
-];
-
-gallery_imgs = [
-    {"classify": "wind", "img": "http://opmpd352q.bkt.clouddn.com/gallery1.jpg"},
-    {"classify": "wind", "img": "http://opmpd352q.bkt.clouddn.com/gallery2.jpg"},
-    {"classify": "wind", "img": "http://opmpd352q.bkt.clouddn.com/gallery3.jpg"},
-    {"classify": "field", "img": "http://opmpd352q.bkt.clouddn.com/gallery4.jpg"},
-    {"classify": "hometown", "img": "http://opmpd352q.bkt.clouddn.com/gallery5.JPG"},
-    {"classify": "mounting", "img": "http://opmpd352q.bkt.clouddn.com/gallery6.jpg"},
-    {"classify": "mounting", "img": "http://opmpd352q.bkt.clouddn.com/gallery7.jpg"},
-    {"classify": "hometown", "img": "http://opmpd352q.bkt.clouddn.com/gallery8.jpg"},
-    {"classify": "field", "img": "http://opmpd352q.bkt.clouddn.com/gallery9.jpg"}
-];
-
 function init_gallery(){
     var gallery_html = "";
 

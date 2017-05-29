@@ -1,0 +1,76 @@
+body{
+    height: 100%;
+    background: url(http://opmpd352q.bkt.clouddn.com/background_2.jpg) no-repeat right bottom fixed;
+    position: relative;
+    padding-top: 10px;
+}
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: fixed;
+    top: 0;
+    z-index:1;
+}
+
+.cuadro_intro_hover{
+    padding: 0;
+    position: relative;
+    height: 100%;
+    z-index: 3;
+}
+.cuadro_intro_hover:hover .caption{
+    opacity: 1;
+    transition: all 1s ease-in 0s;
+    -moz-transition: all 1s ease-in 0s;
+    -webkit-transition: all 1s ease-in 0s;
+    -o-transition: all 1s ease-in 0s;
+    -ms-transition: all 1s ease-in 0s;
+}
+.cuadro_intro_hover img{
+    z-index: 4;
+}
+.cuadro_intro_hover .caption{
+    opacity: 0;
+    position: absolute;
+    bottom: 50px;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    -ms-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    width: 100%;
+}
+.cuadro_intro_hover .blur{
+    background-color: #cccccc;
+    opacity: 0.8;
+    height: 50px;
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    border-radius: 50px;
+}
+.cuadro_intro_hover .caption-text{
+    z-index: 6;
+    color: #fff;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    text-align: right;
+}
+.caption-text .btn-layer{
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline;
+}
+
+.photo-title {
+    top: 30px;
+    position:absolute;
+    color: #FFFFF0;
+    opacity: 0.8;
+    font-weight: bolder;
+    margin-left: 10px;
+}

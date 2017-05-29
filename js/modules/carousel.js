@@ -6,15 +6,6 @@
  * config carousel here
  * @type {*[]}
  */
-var carousel = [
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-14.jpg", "content": '拯救地球好累，虽然有些疲惫但我还是会'},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-23.jpg", "content": ''},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-24.jpg", "content": ''},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-12.jpg", "content": '载着你仿佛载着阳光，不管到哪里都是晴天'},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-21.jpg", "content": ''},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-22.jpg", "content": ''}
-];
-
 function init_indicators(carousel, id) {
     var indicators_html =
         '<ol class="carousel-indicators">' +

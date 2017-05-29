@@ -1,43 +1,6 @@
 /**
  * Created by liye on 2017/5/12.
  */
-
-comments = [
-    {
-        "content": "好累，快被打败了",
-        "name": "恬恬在奔跑",
-        "time": "14:25pm, 12 Jun 2017"
-    },
-    {
-        "content": "This is the best site I've ever seen, excellent, perfect. <mark>Update 2 photots at May 22</mark>",
-        "name": "李美丽",
-        "time": "14:26pm, 12 Jun 2017"
-    },
-    {
-        "content": '好甜 <i class="fa fa-heart-o"></i>',
-        "name": "雪碧",
-        "time": "15:11pm, 12 Jun 2017"
-    },
-    {
-        "content": '回答在牛奶箱里 <i class="fa fa-envelope-open-o"></i>',
-        "name": "申十七",
-        "time": "15:45pm, 12 Jun 2017"
-    },
-    {
-        "content": "好漂亮啊。",
-        "name": "抠脚少女陈yz",
-        "time": "15:57pm, 12 Jun 2017"
-    }
-];
-
-comment_pic = [
-    "http://opmpd352q.bkt.clouddn.com/comment_3.jpg",
-    "http://opmpd352q.bkt.clouddn.com/comment_4.jpg",
-    "http://opmpd352q.bkt.clouddn.com/comment_5.jpg",
-    "http://opmpd352q.bkt.clouddn.com/comment_1.jpg",
-    "http://opmpd352q.bkt.clouddn.com/comment_2.jpg"
-];
-
 var init_comment_count = 3;
 var max_comment_count = comments.length;
 var current_comment_count = init_comment_count;
