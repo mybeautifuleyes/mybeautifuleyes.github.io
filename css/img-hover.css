@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,900,800,700,600);
 h2 {
-    border-bottom: 10px solid red;
+    /*border-bottom: 10px solid red;*/
     font-family: 'Raleway', sans-serif;
     font-size: 65px;
     font-weight: 900;
@@ -51,6 +51,7 @@ h2 {
     overflow: hidden;
     height: 100%;
     z-index: 3;
+    margin-bottom: 20px;
 }
 .cuadro_intro_hover:hover .caption{
     opacity: 1;
