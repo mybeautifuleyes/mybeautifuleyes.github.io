@@ -145,7 +145,7 @@ function init_normal_style_photo(current_row){
         var photo_html = '<div class="panel" style="margin-bottom: 1px">' +
             '<div class="mix">' +
             '<a href="' + photos[album-1].img[i] + '" class="img-wrapper">' +
-            '<img src="' + photos[album-1].img[i] + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
+            '<img src="' + photos[album-1].img[i] + '" class="img-responsive" style="width: 100%;height: 100%;"/>' +
             '</a></div>';
         if (photos[album-1].comment[i] !== "" && photos[album-1].comment[i] !== null)
             photo_html += '<p><i class="fa fa-hand-peace-o"></i> ' + photos[album-1].comment[i] + '</p></div>';

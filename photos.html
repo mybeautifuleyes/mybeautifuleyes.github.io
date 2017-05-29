@@ -7,13 +7,6 @@
 
 	<title>Beautiful Eyes - a Photographs Album of us</title>
 
-	<!-- CSS includes -->
-	<style type="text/css">
-		body{
-			background: url(http://opmpd352q.bkt.clouddn.com/background_2.jpg) no-repeat right bottom fixed;
-		}
-	</style>
-
 	<!-- Bootstrap basic css -->
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
@@ -24,28 +17,139 @@
 	<!-- Local define css -->
 	<link href="css/theme.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
+
+	<!-- CSS includes -->
+	<style type="text/css">
+		body{
+			height: 100%;
+			background: url(http://opmpd352q.bkt.clouddn.com/background_2.jpg) no-repeat right bottom fixed;
+			position: relative;
+			padding-top: 10px;
+		}
+
+		#particles-js{
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: 50% 50%;
+			position: fixed;
+			top: 0;
+			z-index:1;
+		}
+
+		.cuadro_intro_hover{
+			padding: 0;
+			position: relative;
+			height: 100%;
+			z-index: 3;
+		}
+		.cuadro_intro_hover:hover .caption{
+			opacity: 1;
+			
+			transform: translateY(-100px);
+			-webkit-transform:translateY(-100px);
+			-moz-transform:translateY(-100px);
+			-ms-transform:translateY(-100px);
+			-o-transform:translateY(-100px);
+			
+			transition: transform 1s ease-in 0s, opacity 1s ease 0s;
+			-moz-transition: -moz-transform 1s ease 0s, opacity 1s ease 0s;
+			-webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s;
+			-o-transition: -o-transform 1s ease 0s, opacity 1s ease 0s;
+			-ms-transition: -ms-transform 1s ease 0s, opacity 1s ease 0s;
+		}
+		.cuadro_intro_hover img{
+			z-index: 4;
+		}
+		.cuadro_intro_hover .caption{
+			opacity: 0;
+			position: absolute;
+			/*bottom:100px;*/
+			-webkit-transition:all 0.3s ease-in-out;
+			-moz-transition:all 0.3s ease-in-out;
+			-o-transition:all 0.3s ease-in-out;
+			-ms-transition:all 0.3s ease-in-out;
+			transition:all 0.3s ease-in-out;
+			width: 100%;
+		}
+		.cuadro_intro_hover .blur{
+			background-color: rgba(0,0,0,0.7);
+			height: 100px;
+			z-index: 5;
+			position: absolute;
+			width: 100%;
+		}
+		.cuadro_intro_hover .caption-text{
+			z-index: 6;
+			color: #fff;
+			position: absolute;
+			height: 100px;
+			text-align: center;
+			width: 100%;
+		}
+	</style>
 </head>
 <body>
-	<div style="margin-top:-50px">
+
+	<div>
 		<div class="container">
-			<div class="page-header" style="margin-bottom: 0px">
-            	<h2 class="text-center text-success"><span class="fa fa-photo"></span> PHOTOS VIEW</h2>
-        	</div>
+			<div class="page-header row">
+				<div class="col-md-6 col-sm-6 col-xs-6">
+					<h3 class="text-success"><span class="fa fa-photo"></span> PHOTOS (TESTING) </h3>
+					<h4 class="text-warning">(fab, comment and enjoy)</h4>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6" style="z-index: 2;">
+					<h4 class="text-right" style="padding-top: 35px">
+						<a href="index.html"><span class="fa fa-hand-o-left"></span> BACK</a>
+					</h4>
+				</div>
+			</div>
 
 			<!-- photos -->
         	<div class="row container-gallery" id="photo-loader" style="padding-top: 0">
-				<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-1"></div>
-				<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-2"></div>
-				<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-3"></div>
+				<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-1" style="z-index: 2">
+					<div class="panel" style="margin-bottom: 1px">
+						<div class="mix">
+							<a href="http://opmpd352q.bkt.clouddn.com/album-4-1.jpg" class="img-wrapper">
+								<img src="http://opmpd352q.bkt.clouddn.com/album-4-1.jpg" class="img-responsive" style="width: 100%;height: 100%;"/>
+							</a>
+							<p><i class="fa fa-hand-peace-o"></i>
+								上海<br/>消失的旧时光一九四三 回头看的片段有一些风霜<br/>老唱盘旧皮箱 装满了明信片的铁盒里藏着一片玫瑰花瓣
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-2" style="z-index: 2">
+					<div class="panel" style="margin-bottom: 1px">
+						<div class="cuadro_intro_hover">
+							<div class="mix">
+								<a href="http://opmpd352q.bkt.clouddn.com/album-4-1.jpg" class="img-wrapper">
+									<img src="http://opmpd352q.bkt.clouddn.com/album-4-1.jpg" class="img-responsive" style="width: 100%;height: 100%;"/>
+								</a>
+								<p><i class="fa fa-hand-peace-o"></i>
+									上海<br/>消失的旧时光一九四三 回头看的片段有一些风霜<br/>老唱盘旧皮箱 装满了明信片的铁盒里藏着一片玫瑰花瓣
+								</p>
+							</div>
+
+							<div class="caption">
+								<div class="blur"></div>
+								<div class="caption-text">
+									<a class=" btn btn-default" href="https://plus.google.com/u/0/100371904807783155711/posts" target="_blank"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12 photo-panel-col" id="photo-col-3" style="z-index: 2"></div>
 			</div>
 
 			<!-- comment -->
 			<div id="SOHUCS" sid="photos"></div>
-
-			<hr>
-			<h3><a href="index.html"><span class="fa fa-hand-o-left"></span>BACK</a></h3>
 		</div>
 	</div>
+
+	<div id="particles-js"></div>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,16 +166,16 @@
 	<!-- local define -->
 	<script src="js/jquery.mixitup.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/theme.js"></script>
-	<script src="js/photos.js"></script>
+	<!--<script src="js/theme.js"></script>-->
+	<!--<script src="js/photos.js"></script>-->
 
 	<script type="text/javascript">
 		jQuery(function($) {
 			// Mix It Up Gallery and Magnific Popup setup
 			$('.container-gallery').mixItUp().magnificPopup({
-				delegate: 'a',
-				type: 'image'
-			});
+                delegate: 'a',
+                type: 'image'
+            });
 		});
 
 		(function(){
@@ -80,6 +184,128 @@
 			var width = window.innerWidth || document.documentElement.clientWidth;
 			if (width < 960) {
 				window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
+	</script>
+
+	<script>
+        $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js", function(){
+            particlesJS('particles-js',
+                {
+                    "particles": {
+                        "number": {
+                            "value": 80,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#000000"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            },
+                            "polygon": {
+                                "nb_sides": 5
+                            },
+                            "image": {
+                                "width": 100,
+                                "height": 100
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": false,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 5,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#cccccc",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 6,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 400,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "bubble": {
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
+                                "speed": 3
+                            },
+                            "repulse": {
+                                "distance": 200
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            },
+                            "remove": {
+                                "particles_nb": 2
+                            }
+                        }
+                    },
+                    "retina_detect": true,
+                    "config_demo": {
+                        "hide_card": false,
+                        "background_color": "#b61924",
+                        "background_image": "",
+                        "background_position": "50% 50%",
+                        "background_repeat": "no-repeat",
+                        "background_size": "cover"
+                    }
+                }
+            );
+        });
 	</script>
 
 </body>
