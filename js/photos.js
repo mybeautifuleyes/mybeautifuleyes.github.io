@@ -1,3 +1,4 @@
+// params filter
 function getUrlParams() {
     var url = String(window.document.location.href);
     var params = {};
@@ -17,10 +18,13 @@ if (params.length === 0 || params.hasOwnProperty('album') === false) {
 } else {
     album = params['album'];
 }
+
+// initial comment
 var source_id = album_source_id[parseInt(album) - 1];
 $comment = $('#SOHUCS');
 $comment.attr('sid', 'photo-' + source_id);
 
+// initial photos
 var $photo = [
     $('#photo-col-1'), $('#photo-col-2'), $('#photo-col-3')
 ];
@@ -62,6 +66,22 @@ function init_normal_style_photo(current_row){
         if (i === photos[album-1].img.length)
             break;
     }
+}
+
+// initial pagination
+var current_page = 1;
+var pagination_html = '<li class="active"><a href="javascript: void(0);">1</a></li>';
+for (var row = 6; row < photos[album-1].img.length; row += 6){
+    pagination_html += '<li><a class="" href="javascript: void(0);" onclick="pagination_click(2)" id="page_2">' + (row/6+1) + '</a></li>';
+}
+$('.pagination').html(pagination_html);
+
+function pagination_click(page) {
+    $(".pagination li:eq(page) a").addClass("active");
+    $("#page2").addClass("active");
+
+    console.log("in");
+    console.log($(".pagination li:eq(page) a").addClass("active"));
 }
 
 function button_click() {

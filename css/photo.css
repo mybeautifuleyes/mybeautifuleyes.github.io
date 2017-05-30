@@ -3,6 +3,7 @@ body{
     background: url(http://opmpd352q.bkt.clouddn.com/background_2.jpg) no-repeat right bottom fixed;
     position: relative;
     padding-top: 10px;
+    z-index: -2;
 }
 
 #particles-js{
@@ -12,7 +13,7 @@ body{
     background-position: 50% 50%;
     position: fixed;
     top: 0;
-    z-index:1;
+    z-index: -1;
 }
 
 .cuadro_intro_hover{
@@ -73,4 +74,16 @@ body{
     opacity: 0.8;
     font-weight: bolder;
     margin-left: 10px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.pagination>li>a, .pagination>li>span {
+    border-radius: 50%
+    !important;
+    margin: 0 5px;
 }
