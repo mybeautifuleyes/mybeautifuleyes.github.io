@@ -15,6 +15,11 @@ var carousel = [
 // album
 var album_imgs = [
     {
+        "img": "http://opmpd352q.bkt.clouddn.com/7-0",
+        "title": "7",
+        "desc": "申十七"
+    },
+    {
         "img": "http://opmpd352q.bkt.clouddn.com/front-1.jpg",
         "title": "摄影集",
         "desc": "2013退休至今<br/>”秋风爽”摄影集之“世界那么大，不要停下你的脚步”<br/>天气：晴/雨/多云<br/>存放照片数：8<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
@@ -121,6 +126,23 @@ var album_source_id = [
 
 // photos
 var photos = [
+    {
+        "img": [
+            "http://opmpd352q.bkt.clouddn.com/7-1.jpg",
+            "http://opmpd352q.bkt.clouddn.com/7-2",
+            "http://opmpd352q.bkt.clouddn.com/7-3"
+        ],
+        "title": [
+            "",
+            "",
+            ""
+        ],
+        "comment": [
+            "<strong>申十七</strong>",
+            "生日快乐",
+            "<strong>：）</strong>"
+        ]
+    },
     {
         "img": [
             "http://opmpd352q.bkt.clouddn.com/album-1-1.jpg",
