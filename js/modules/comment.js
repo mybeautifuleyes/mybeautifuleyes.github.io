@@ -1,7 +1,7 @@
 /**
  * Created by liye on 2017/5/12.
  */
-var init_comment_count = 3;
+var init_comment_count = 4;
 var max_comment_count = comments.length;
 var current_comment_count = init_comment_count;
 
