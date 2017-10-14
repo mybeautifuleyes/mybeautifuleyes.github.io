@@ -77,44 +77,8 @@ var gallery_imgs = [
     {"classify": "field", "img": "http://opmpd352q.bkt.clouddn.com/gallery9.jpg"}
 ];
 
-// comments
-comments = [
-    {
-        "content": "7妹妹生日快乐：)",
-        "name": "恬恬在奔跑",
-        "time": "00:00am, 26 Sep 2017"
-    },
-    {
-        "content": "<mark>7妹妹生日快乐：)</mark>",
-        "name": "李美丽",
-        "time": "00:00am, 26 Sep 2017"
-    },
-    {
-        "content": '7妹妹生日快乐：) <i class="fa fa-heart-o"></i>',
-        "name": "雪碧",
-        "time": "00:00am, 26 Sep 2017"
-    },
-    {
-        "content": '嘿嘿嘿：) <i class="fa fa-envelope-open-o"></i>',
-        "name": "申十七",
-        "time": "00:00am, 26 Sep 2017"
-    },
-    {
-        "content": "7妹妹生日快乐：)",
-        "name": "抠脚少女陈yz",
-        "time": "00:00am, 26 Sep 2017"
-    }
-];
-
-comment_pic = [
-    "http://opmpd352q.bkt.clouddn.com/comment_3.jpg",
-    "http://opmpd352q.bkt.clouddn.com/comment_4.jpg",
-    "http://opmpd352q.bkt.clouddn.com/comment_5.jpg",
-    "http://opmpd352q.bkt.clouddn.com/comment_1.jpg",
-    "http://opmpd352q.bkt.clouddn.com/comment_2.jpg"
-];
-
 var album_source_id = [
+    "seven",
     "daddy",
     "samui",
     "seoul",

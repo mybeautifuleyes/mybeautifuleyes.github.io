@@ -1,0 +1,65 @@
+#myCarousel .carousel-caption {
+    left:0;
+    right:0;
+    bottom:0;
+    text-align:left;
+    padding:10px;
+    background:rgba(0,0,0,0.6);
+    text-shadow:none;
+}
+
+#myCarousel .list-group {
+    position:absolute;
+    top:0;
+    right:0;
+}
+#myCarousel .list-group-item {
+    border-radius:0px;
+    cursor:pointer;
+}
+#myCarousel .list-group .active {
+    background-color:#eee;
+}
+
+/* width >= 992px*/
+@media (min-width: 992px) {
+    #myCarousel {padding-right:33.3333%;}
+    #myCarousel .carousel-controls {display:none;}
+
+    .container-about .section-div-comment {
+        max-height: 400px;
+        overflow-y: auto;}
+
+    .container-about .section-div-timeline{
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}
+/* width < 991px*/
+@media (max-width: 991px) {
+    #myCarousel .list-group {display:none;}
+
+    .container-about .section-div-comment {
+        max-height: 400px;
+        overflow-y: auto;}
+
+    .container-about .section-div-timeline{
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}
+
+/* width < 768px*/
+@media (max-width: 768px) {
+    .carousel-caption p {display:none;}
+
+    .container-about .section-div-comment {
+        max-height: 300px;
+        overflow-y: auto;
+        padding-left: 10px;
+        padding-right: 10px}
+
+    .container-about .section-div-timeline{
+        display:none;
+    }
+}

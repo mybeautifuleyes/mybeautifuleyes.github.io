@@ -20,6 +20,7 @@
     <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/comment.css" rel="stylesheet">
     <link href="css/active-button.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
 
     <!-- css shake -->
     <link rel="stylesheet" type="text/css" href="css/csshake.min.css">
@@ -43,7 +44,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="info"><a href="#about" class="smooth-scroll">About</a></li>
+                    <li class="info"><a href="#about" class="smooth-scroll">Whisper</a></li>
                     <li class="danger"><a href="#projects" class="smooth-scroll">Album</a></li>
                     <li class="success"><a href="#gallery" class="smooth-scroll">Gallery</a></li>
                     <li class="primary"><a href="#contact" class="smooth-scroll">Contact</a></li>
@@ -54,29 +55,116 @@
     </nav>
 
     <!-- Carousel -->
-    <div class="container">
+    <!--<div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 col-sm-12 col-xs-12" style="margin-bottom:10px">
+            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom:10px">
                 <div id="theme-carousel" class="carousel slide" data-ride="carousel"></div>
             </div>
-            <div class="col-md-4 col-sm-12 col-xs-12">
-                <section class="comments" id="comment-section" style="margin-top:10px">
-                </section>
-                <a class="btn btn-default btn-block" href="#comment" role="button" style="margin-top: 30px">飞奔去吐槽：)</a>
-            </div>
         </div>
+    </div>-->
+
+    <!-- New Carousel -->
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 3px">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img src="http://opmpd352q.bkt.clouddn.com/carousel1-760x400.jpg">
+                    <div class="carousel-caption">
+                        <h4><a href="#">Beautiful Eyes - 一个私人的照片分享站点</a></h4>
+                        <p class="small"><i class="fa fa-envelope-open-o"></i>&nbsp; 用力活着用力爱哪怕肝脑涂地／不求任何人满意只要对得起自己／关于理想我从来没选择放弃／即使在灰头土脸的日子里
+                            <br/><a class="label label-primary" href="#">追梦赤子心 - Gala</a></p>
+                    </div>
+                </div><!-- End Item -->
+
+                <div class="item">
+                    <img src="http://opmpd352q.bkt.clouddn.com/carousel2-760x400.jpg">
+                    <div class="carousel-caption">
+                        <h4><a href="#about" class="smooth-scroll">Whisper - 李美丽的杂七杂八</a></h4>
+                        <p class="small">长亭外 古道边 芳草碧连天／晚风拂柳笛声残 夕阳山外山／天之涯 地之角 知交半零落／人生难得是欢聚 唯有别离／天之涯 地之角 知交半零落／一壶浊洒尽余欢 今宵别梦寒
+                            <br/><a class="label label-primary smooth-scroll" href="#about">送别 - 李叔同</a></p>
+                    </div>
+                </div><!-- End Item -->
+
+                <div class="item">
+                    <img src="http://opmpd352q.bkt.clouddn.com/carousel3-760x400.jpg">
+                    <div class="carousel-caption">
+                        <h4><a href="#projects" class="smooth-scroll">Album - 被分类的照片集合</a></h4>
+                        <p class="small"><i class="fa fa-envelope-open-o"></i>&nbsp; 我有故事 你有酒吗／阳光温暖晒着我脚丫／想起那些时光 眼泪悄然落下／为了在我心底 最为美丽的年华
+                            ／想起那些时光 仿佛昨天一样/只是再回不去 那段无忧的年华
+                            <br/><a class="label label-primary smooth-scroll" href="#projects">旧时光 - 夏小虎</a></p>
+                    </div>
+                </div><!-- End Item -->
+
+                <div class="item">
+                    <img src="http://opmpd352q.bkt.clouddn.com/calousel4-760x400.jpg">
+                    <div class="carousel-caption">
+                        <h4><a href="#gallery" class="smooth-scroll">Gallery - 主题照片展览</a></h4>
+                        <p class="small"><i class="fa fa-envelope-open-o"></i>&nbsp; 梦醒后 还是依然奔波在风雨的街头／有时候想哭就把泪 咽进一腔热血的胸口
+                            ／公车上我睡过了车站／一路上我望着霓虹的北京／我的理想把我丢在这个拥挤的人潮／车窗外已经是一片白雪茫茫
+                            <br/><a class="label label-primary smooth-scroll" href="#gallery">理想 - 赵雷</a></p>
+                    </div>
+                </div><!-- End Item -->
+
+                <div class="item">
+                    <img src="http://opmpd352q.bkt.clouddn.com/carousel5-760x400.jpg">
+                    <div class="carousel-caption">
+                        <h4><a href="#contact" class="smooth-scroll">Contact - 联系英俊帅气潇洒的我</a></h4>
+                        <p class="small"><i class="fa fa-envelope-open-o"></i>&nbsp; rui sou sou xi dou xi la／sou la xi xi xi xi la xi la sou
+                            ／吹着前奏望着天空／我想起花瓣试着掉落／为你翘课的那一天／花落的那一天／教室的那一间／我怎么看不见／消失的下雨天／我好想再淋一遍
+                            <br/><a class="label label-primary smooth-scroll" href="#contact">晴天 - 周杰伦</a></p>
+                    </div>
+                </div><!-- End Item -->
+
+            </div><!-- End Carousel Inner -->
+
+
+            <ul class="list-group col-sm-4">
+                <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Beautiful Eyes, a private site of world wonderful photos.</h4></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Whisper - 你喜欢养狗吗？单身的，譬如说我这种</h4></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Album - 我能想到最好的道别就是明天见</h4></li>
+                <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>Gallery - 宁愿天天下雨，以为你是因为下雨不来</h4></li>
+                <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4><i class="fa fa-envelope-open-o"></i>&nbsp; Contact me<mark>看不见你的笑我怎么睡得着</mark></h4></li>
+            </ul>
+
+            <!-- Controls -->
+            <div class="carousel-controls">
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+
+        </div><!-- End Carousel -->
     </div>
 
     <!-- about -->
     <div class="container-about">
         <div class="container">
             <div class="page-header" id="about">
-                <h2 class="text-center text-info"><span class="fa fa-user"></span> ABOUT</h2>
+                <h2 class="text-center text-info"><span class="fa fa-user"></span> WHISPER</h2>
             </div>
             <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-4">
+                <div class="col-sm-6 col-sm-offset-3 col-xs-12 col-md-4 col-md-offset-4">
+                    <div class="row" style="font: normal 20px/30px Arial, sans-serif; margin-bottom: 5px; padding-left: 5px">
+                        <p style="height: 30px; float: left; margin-right: 0.3em;">这是:</p>
+                        <b style="float: left; overflow: hidden; position: relative; height: 30px">
+                            <span class="title-span">
+                                分享照片的神奇网站<br />
+                                大名李美丽／小名雪糕／外号傻猫<br />
+                                程序员小哥哥无聊时期的产物<br />
+                                朋友圈不敢装的逼可以在这里装
+                            </span>
+                        </b>
+                    </div>
+                </div>
+                <!--<div class="col-md-2 col-sm-2 col-xs-4">
                     <div class="panel panel-warning shake-slow">
-                        <div class="panel-body shake-slow shake-constant shake-constant--hover">
+                        <div class="panel-body shake-slow shake-constant shake-constant&#45;&#45;hover">
                             <img data-original="http://opmpd352q.bkt.clouddn.com/about_1.jpg" class="lazy img-responsive" style="width: 100%;height: 100%;" />
                         </div>
                     </div>
@@ -85,91 +173,66 @@
                             <img data-original="http://opmpd352q.bkt.clouddn.com/about_2.jpg" class="lazy img-responsive" style="width: 100%;height: 100%;" />
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-8 text-justify">
-                    <p><mark>BEAUTIFUL EYES</mark>是一个分享照片的页面</p>
-                    <ul>
-                        <li><ins>PHOTO ALBUM</ins>是被分类的照片集合</li>
-                        <li><ins>GALLERY</ins>会定期更换不同主题的照片</li>
-                    </ul>
-					<p><strong>有一些不为人知的秘密：</strong></p>
-					<ul>
-						<li><strong><mark>5月22日更新：摄影集+2</mark></strong></li>
-						<li>旁边的这只猫大名<strong>李美丽</strong>、小名雪糕、外号傻猫</li>
-                        <li>这个网站，用电脑浏览器打开，比手机浏览器好看一万倍...</li>
-						<li>评论功能开放了，大家可以愉快的在页面上跟我互动了...</li>
-                    </ul>
-                    <p><strong>好物推荐</strong></p>
-                    <ul>
-                        <li><span class="fa fa-heart-o"></span><a href="http://www.paperang.cn/" target="_blank"> 申十七推荐：喵喵机</a></li>
-                        <li><span class="fa fa-heart-o"></span><a href="http://c.b0yp.com/h.TFaVBM?cv=EXThZGrxuFc&sm=c94703" target="_blank"> 世界这么大 带你吃遍它</a></li>
-                        <li><span class="fa fa-heart-o"></span><a href="http://www.reflower.com.cn/" target="_blank"> 花点时间：每周一花的小幸福</a></li>
-                    </ul>
+                </div>-->
+                <div class="col-md-6 col-sm-6 col-xs-12 text-justify">
+                    <div class="section-div-comment">
+                        <section class="comments" id="comment-section" style="margin-top: 10px">
+                        </section>
+                    </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 text-justify">
-                    <!-- time line title -->
-                    <div class="row" style="font: normal 20px/30px Arial, sans-serif; margin-bottom: 15px">
-                        <p style="height: 30px; float: left; margin-right: 0.3em;">这是一个</p>
-                        <b style="float: left; overflow: hidden; position: relative; height: 30px">
-                            <span class="title-span">
-                                神奇的网站<br />
-                                李美丽的主页<br />
-                                程序员小哥哥无聊时期的产物<br />
-                                朋友圈不敢装的逼可以在这里装
-                            </span>
-                        </b>
+                    <div class="section-div-timeline">
+                        <section class="comments" style="margin-top: 10px">
+                            <article class="comment">
+                                <div class="comment-img">
+                                    <button type="button" class="btn btn-danger btn-circle btn-lg">
+                                        <i class="fa fa-photo faa-spin animated"></i>
+                                    </button>
+                                </div>
+                                <div class="comment-body">
+                                    <div class="text"><p>
+                                        2017.10.14, 主页排版更新，新增相册"Koh Chang Island"
+                                    </p></div>
+                                </div>
+                            </article>
+                            <article class="comment">
+                                <div class="comment-img">
+                                    <button type="button" class="btn btn-primary btn-circle btn-lg">
+                                        <i class="fa fa-space-shuttle faa-passing animated"></i>
+                                    </button>
+                                </div>
+                                <div class="comment-body">
+                                    <div class="text"><p>
+                                        2017.05.23, 页面图片采用Lazy Load的加载方式，优化访问速度，照片详情页重新设计更新
+                                    </p></div>
+                                </div>
+                            </article>
+                            <article class="comment">
+                                <div class="comment-img">
+                                    <button type="button" class="btn btn-warning btn-circle btn-lg">
+                                        <i class="fa fa-commenting-o faa-shake animated"></i>
+                                    </button>
+                                </div>
+                                <div class="comment-body">
+                                    <div class="text"><p>
+                                        2017.05.15, 评论系统开发完成并开放
+                                    </p></div>
+                                </div>
+                            </article>
+                            <article class="comment">
+                                <div class="comment-img">
+                                    <button type="button" class="btn btn-success btn-circle btn-lg">
+                                        <i class="fa fa-heart faa-pulse animated"></i>
+                                    </button>
+                                </div>
+                                <div class="comment-body">
+                                    <div class="text"><p>
+                                        2017.05.12, 网站上线并更换域名，使用国内服务云存储照片，自适应手机尺寸
+                                    </p></div>
+                                </div>
+                            </article>
+                        </section>
                     </div>
-                    <!-- time line -->
-                    <section class="comments">
-                        <article class="comment">
-                            <div class="comment-img">
-                                <button type="button" class="btn btn-danger btn-circle btn-lg">
-                                    <i class="fa fa-photo faa-spin animated"></i>
-                                </button>
-                            </div>
-                            <div class="comment-body">
-                                <div class="text"><p>
-                                    2017.09.26, 7妹妹生日快乐
-                                </p></div>
-                            </div>
-                        </article>
-                        <article class="comment">
-                            <div class="comment-img">
-                                <button type="button" class="btn btn-primary btn-circle btn-lg">
-                                    <i class="fa fa-space-shuttle faa-passing animated"></i>
-                                </button>
-                            </div>
-                            <div class="comment-body">
-                                <div class="text"><p>
-                                    2017.05.23, 页面图片采用Lazy Load的加载方式，优化访问速度，照片详情页重新设计更新
-                                </p></div>
-                            </div>
-                        </article>
-                        <article class="comment">
-                            <div class="comment-img">
-                                <button type="button" class="btn btn-warning btn-circle btn-lg">
-                                    <i class="fa fa-commenting-o faa-shake animated"></i>
-                                </button>
-                            </div>
-                            <div class="comment-body">
-                                <div class="text"><p>
-                                    2017.05.15, 评论系统开发完成并开放
-                                </p></div>
-                            </div>
-                        </article>
-                        <article class="comment">
-                            <div class="comment-img">
-                                <button type="button" class="btn btn-success btn-circle btn-lg">
-                                    <i class="fa fa-heart faa-pulse animated"></i>
-                                </button>
-                            </div>
-                            <div class="comment-body">
-                                <div class="text"><p>
-                                    2017.05.12, 网站上线并更换域名，使用国内服务云存储照片，自适应手机尺寸
-                                </p></div>
-                            </div>
-                        </article>
-                    </section>
                 </div>
             </div>
         </div>
@@ -331,6 +394,33 @@
                 call_show_gallery();
             });
 
+            // carousel
+            var clickEvent = false;
+            $('#myCarousel').carousel({
+                interval:   4000
+            }).on('click', '.list-group li', function() {
+                clickEvent = true;
+                $('.list-group li').removeClass('active');
+                $(this).addClass('active');
+            }).on('slid.bs.carousel', function(e) {
+                if(!clickEvent) {
+                    var count = $('.list-group').children().length -1;
+                    var current = $('.list-group li.active');
+                    current.removeClass('active').next().addClass('active');
+                    var id = parseInt(current.data('slide-to'));
+                    if(count == id) {
+                        $('.list-group li').first().addClass('active');
+                    }
+                }
+                clickEvent = false;
+            });
+        });
+
+        $(window).load(function() {
+            var boxheight = $('#myCarousel .carousel-inner').innerHeight();
+            var itemlength = $('#myCarousel .item').length;
+            var triggerheight = Math.round(boxheight/itemlength+1);
+            $('#myCarousel .list-group-item').outerHeight(triggerheight);
         });
 
         // load comment
