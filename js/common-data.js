@@ -24,6 +24,33 @@ var album_imgs = [
         "id": "daddy"
     },
     {
+        "img": "./img/album/front-9.jpg",
+        "title": "Tokyo",
+        "desc": "2018.05<br/>东京 - 五月天",
+        "weather": "晴/雨",
+        "count": "4",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "id": "tokyo"
+    },
+    {
+        "img": "./img/album/front-8.jpg",
+        "title": "Lombok - Gili T",
+        "desc": "2018.03<br/>龙目 - T岛",
+        "weather": "晴",
+        "count": "4",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "id": "lombok"
+    },
+    {
+        "img": "./img/album/front-10.jpg",
+        "title": "Koh Chang Island",
+        "desc": "2017.10<br/>象岛",
+        "weather": "晴",
+        "count": "5",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "id": "koh-chang"
+    },
+    {
         "img": "./img/album/front-2.jpg",
         "title": "Ko Samui Thailand",
         "desc": "2016.04<br/>5 days in Ko Samui for Lei's wedding",
@@ -69,7 +96,7 @@ var album_imgs = [
         "id": "jeju"
     },
     {
-        "img": "http://opmpd352q.bkt.clouddn.com/7-0",
+        "img": "./img/album/front-7.jpg",
         "title": "7",
         "desc": "申十七",
         "weather": "",
