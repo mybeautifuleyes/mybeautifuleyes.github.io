@@ -25,7 +25,7 @@ var album_imgs = [
     },
     {
         "img": "./img/album/front-9.jpg",
-        "title": "Tokyo",
+        "title": "Tokyo Japan",
         "desc": "2018.05<br/>东京 - 五月天",
         "weather": "晴/雨",
         "count": "4",
@@ -34,7 +34,7 @@ var album_imgs = [
     },
     {
         "img": "./img/album/front-8.jpg",
-        "title": "Lombok - Gili T",
+        "title": "Lombok - Gili T Indonesia",
         "desc": "2018.03<br/>龙目 - T岛",
         "weather": "晴",
         "count": "4",
@@ -43,7 +43,7 @@ var album_imgs = [
     },
     {
         "img": "./img/album/front-10.jpg",
-        "title": "Koh Chang Island",
+        "title": "Koh Chang Thailand",
         "desc": "2017.10<br/>象岛",
         "weather": "晴",
         "count": "5",
@@ -88,7 +88,7 @@ var album_imgs = [
     },
     {
         "img": "./img/album/front-6.jpg",
-        "title": "Jeju Island Korea",
+        "title": "Jeju Korea",
         "desc": "2016.06<br/>After-graduation trip at Jeju Island",
         "weather": "小雨",
         "count": "2",
@@ -99,7 +99,7 @@ var album_imgs = [
         "img": "./img/album/front-7.jpg",
         "title": "申十七",
         "desc": "仅用此祝生日快乐",
-        "weather": "",
+        "weather": "<i class='fa fa-sun-o'></i>",
         "count": "3",
         "star": "<i class='fa fa-birthday-cake'></i><i class='fa fa-birthday-cake'></i>",
         "id": "seven"
@@ -205,10 +205,12 @@ var photos = {
             "./img/album/album-7-2.jpg"
         ],
         "title": [
-            "海豚",
-            ""
+            "",
+            "海豚"
         ],
         "comment" : [
+            "",
+            "海边偶遇"
         ]
     },
     "city": {
