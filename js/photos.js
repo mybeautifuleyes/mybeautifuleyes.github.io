@@ -12,7 +12,7 @@ function getUrlParams() {
 }
 
 var params = getUrlParams();
-var album = 0;
+var album;
 if (params.length === 0 || params.hasOwnProperty('album') === false) {
     location.href = "index.html";
 } else {
@@ -20,9 +20,8 @@ if (params.length === 0 || params.hasOwnProperty('album') === false) {
 }
 
 // initial comment
-var source_id = album_source_id[parseInt(album) - 1];
 $comment = $('#SOHUCS');
-$comment.attr('sid', 'photo-' + source_id);
+$comment.attr('sid', 'photo-' + album);
 
 // initial photos
 var $photo = [
@@ -35,13 +34,13 @@ function init_normal_style_photo(current_row){
             '<div class="cuadro_intro_hover">' +
             // mix
             '<div class="mix">' +
-            '<img src="' + photos[album-1].img[i] + '" class="img-responsive" style="width: 100%;height: 100%;"/>';
+            '<img src="' + photos[album].img[i] + '" class="img-responsive" style="width: 100%;height: 100%;"/>';
 
-        if (photos[album-1].title[i] !== "" && photos[album-1].title[i] !== null)
-            photo_html += '<h4 class="photo-title">[ ' + photos[album-1].title[i] + ' ]</h4>';
+        if (photos[album].title[i] !== "" && photos[album].title[i] !== null)
+            photo_html += '<h4 class="photo-title">[ ' + photos[album].title[i] + ' ]</h4>';
 
-        if (photos[album-1].comment[i] !== "" && photos[album-1].comment[i] !== null)
-            photo_html += '<p><i class="fa fa-music"></i> ' + photos[album-1].comment[i] + '</p>';
+        if (photos[album].comment[i] !== "" && photos[album].comment[i] !== null)
+            photo_html += '<p><i class="fa fa-music"></i> ' + photos[album].comment[i] + '</p>';
 
         photo_html += '</div>' +
             // caption
@@ -50,7 +49,7 @@ function init_normal_style_photo(current_row){
             '<div class="caption-text">' +
             '<button type="button" class="btn btn-default btn-circle btn-layer" onclick="button_click()">' +
             '<i class="fa fa-heart-o faa-pulse animated"></i></button>' +
-            '<a href="' + photos[album-1].img[i] + '" class="img-wrapper">' +
+            '<a href="' + photos[album].img[i] + '" class="img-wrapper">' +
             '<button type="button" class="btn btn-info btn-circle btn-layer">' +
             '<i class="fa fa-photo faa-float animated"></i></button></a>' +
             '</div></div>' +
@@ -63,7 +62,7 @@ function init_normal_style_photo(current_row){
     for (var current_photo = 0; current_photo < 3; current_photo ++) {
         $photo[current_photo].html($photo[current_photo].html() + init_html(i));
         i += 1;
-        if (i === photos[album-1].img.length)
+        if (i === photos[album].img.length)
             break;
     }
 }
@@ -71,7 +70,7 @@ function init_normal_style_photo(current_row){
 // initial pagination
 var current_page = 1;
 var pagination_html = '<li class="active"><a href="javascript: void(0);">1</a></li>';
-for (var row = 6; row < photos[album-1].img.length; row += 6){
+for (var row = 6; row < photos[album].img.length; row += 6){
     pagination_html += '<li><a class="" href="javascript: void(0);" onclick="pagination_click(2)" id="page_2">' + (row/6+1) + '</a></li>';
 }
 $('.pagination').html(pagination_html);
@@ -91,5 +90,5 @@ function button_click() {
     $("this i").removeClass("fa-heart-o").addClass("fa-heart");
 }
 
-for (var row = 0; row < photos[album-1].img.length; row+=3)
+for (var row = 0; row < photos[album].img.length; row+=3)
     $("#photo-loader").html(init_normal_style_photo(row));

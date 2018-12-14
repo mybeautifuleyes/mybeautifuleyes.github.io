@@ -12,7 +12,10 @@ function init_album(current_row) {
             '<img src="' + album_imgs[i].img + '" class="img-responsive lazy" style="width: 100%;height: 100%;"/>' +
             '<h3>' + album_imgs[i].title + '</h3>' +
             '<p>' + album_imgs[i].desc + '</p>' +
-            '<p><a href="photos.html?album=' + (i+1) + '" target="_blank"><span class="fa fa-heart-o"></span> MORE</a></p>' +
+            '<p>天气：' + album_imgs[i].weather + '</p>' +
+            '<p>存放照片数：' + album_imgs[i].count + '</p>' +
+            '<p>期待值：' + album_imgs[i].star + '</p>' +
+            '<p><a href="photos.html?album=' + album_imgs[i].id + '" target="_blank"><span class="fa fa-heart-o"></span> MORE</a></p>' +
             '</div></div>';
         return album_html;
     }

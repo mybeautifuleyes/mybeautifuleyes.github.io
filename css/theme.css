@@ -6844,7 +6844,7 @@ body {
   display: inline-block;
   padding-top: 30px;
   padding-bottom: 30px;
-  background: url(http://opmpd352q.bkt.clouddn.com/photo_background.jpg) no-repeat center center fixed;
+  background: url(../img/project_background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -6892,7 +6892,7 @@ body {
 	display: inline-block;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	background: url(http://opmpd352q.bkt.clouddn.com/contact_background.jpg) no-repeat center center fixed;
+	background: url(../img/contact_background.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

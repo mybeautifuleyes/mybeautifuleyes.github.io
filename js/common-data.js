@@ -15,44 +15,94 @@ var carousel = [
 // album
 var album_imgs = [
     {
-        "img": "http://opmpd352q.bkt.clouddn.com/7-0",
-        "title": "7",
-        "desc": "申十七"
-    },
-    {
-        "img": "http://opmpd352q.bkt.clouddn.com/front-1.jpg",
+        "img": "./img/album/front-1.jpg",
         "title": "摄影集",
-        "desc": "2013退休至今<br/>”秋风爽”摄影集之“世界那么大，不要停下你的脚步”<br/>天气：晴/雨/多云<br/>存放照片数：8<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+        "desc": "2013退休至今<br/>爸爸的摄影集",
+        "weather": "晴/雨/多云",
+        "count": "8",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "id": "daddy"
     },
     {
-        "img": "http://opmpd352q.bkt.clouddn.com/front-2.jpg",
+        "img": "./img/album/front-9.jpg",
+        "title": "Tokyo",
+        "desc": "2018.05<br/>东京 - 五月天",
+        "weather": "晴/雨",
+        "count": "4",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "id": "tokyo"
+    },
+    {
+        "img": "./img/album/front-8.jpg",
+        "title": "Lombok - Gili T",
+        "desc": "2018.03<br/>龙目 - T岛",
+        "weather": "晴",
+        "count": "4",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "id": "lombok"
+    },
+    {
+        "img": "./img/album/front-10.jpg",
+        "title": "Koh Chang Island",
+        "desc": "2017.10<br/>象岛",
+        "weather": "晴",
+        "count": "5",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "id": "koh-chang"
+    },
+    {
+        "img": "./img/album/front-2.jpg",
         "title": "Ko Samui Thailand",
-        "desc": "2016.04<br/>5 days in Ko Samui for Lei's wedding<br/>天气：晴<br/>存放照片数：3<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+        "desc": "2016.04<br/>5 days in Ko Samui for Lei's wedding",
+        "weather": "晴",
+        "count": "3",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "id": "samui"
     },
     {
-        "img": "http://opmpd352q.bkt.clouddn.com/front-3.JPG",
+        "img": "./img/album/front-3.jpg",
         "title": "Seoul Korea",
-        "desc": "2015.04<br/>ICDE 2015<br/>天气：晴<br/>存放照片数：5<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star-half-o'></i>"
+        "desc": "2015.04<br/>ICDE 2015",
+        "weather": "晴/雨",
+        "count": "5",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star-half-o'></i>",
+        "id": "seoul"
     },
     {
-        "img": "http://opmpd352q.bkt.clouddn.com/album-4-1.jpg",
+        "img": "./img/album/front-5.jpg",
         "title": "一图一城",
-        "desc": "2016.06<br/>华东五市 与家人<br/>天气：晴<br/>存放照片数：6<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star-half-o'></i>"
+        "desc": "2016.06<br/>华东五市 与家人",
+        "weather": "晴",
+        "count": "6",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star-half-o'></i>",
+        "id": "city"
     },
     {
-        "img": "http://opmpd352q.bkt.clouddn.com/album-5-2.jpg",
-        "title": "串串合集",
-        "desc": "2016.05-07<br/>毕业收集篇<br/>存放照片数：6<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star-half-o'></i>"
-    },
-    {
-        "img": "http://opmpd352q.bkt.clouddn.com/front-4.jpg",
+        "img": "./img/album/front-4.jpg",
         "title": "西塘&舟山",
-        "desc": "2015.07<br/>陪老大毕业之“西塘、舟山”<br/>天气：晴/小雨<br/>存放照片数：0<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+        "desc": "2016.05-07<br/>毕业收集篇",
+        "weather": "ALL",
+        "count": "6",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star-half-o'></i>",
+        "id": "chuanchuan"
     },
     {
-        "img": "http://opmpd352q.bkt.clouddn.com/album-7-2.jpg",
+        "img": "./img/album/front-6.jpg",
         "title": "Jeju Island Korea",
-        "desc": "2016.06<br/>After-graduation trip at Jeju Island<br/>天气：小雨<br/>存放照片数：2<br/>期待值：<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+        "desc": "2016.06<br/>After-graduation trip at Jeju Island",
+        "weather": "小雨",
+        "count": "2",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "id": "jeju"
+    },
+    {
+        "img": "./img/album/front-7.jpg",
+        "title": "7",
+        "desc": "申十七",
+        "weather": "",
+        "count": "",
+        "star": "",
+        "id": "seven"
     }
 ];
 
@@ -66,31 +116,20 @@ var gallery_classify = [
 ];
 
 var gallery_imgs = [
-    {"classify": "wind", "img": "http://opmpd352q.bkt.clouddn.com/gallery1.jpg"},
-    {"classify": "wind", "img": "http://opmpd352q.bkt.clouddn.com/gallery2.jpg"},
-    {"classify": "wind", "img": "http://opmpd352q.bkt.clouddn.com/gallery3.jpg"},
-    {"classify": "field", "img": "http://opmpd352q.bkt.clouddn.com/gallery4.jpg"},
-    {"classify": "hometown", "img": "http://opmpd352q.bkt.clouddn.com/gallery5.JPG"},
-    {"classify": "mounting", "img": "http://opmpd352q.bkt.clouddn.com/gallery6.jpg"},
-    {"classify": "mounting", "img": "http://opmpd352q.bkt.clouddn.com/gallery7.jpg"},
-    {"classify": "hometown", "img": "http://opmpd352q.bkt.clouddn.com/gallery8.jpg"},
-    {"classify": "field", "img": "http://opmpd352q.bkt.clouddn.com/gallery9.jpg"}
-];
-
-var album_source_id = [
-    "seven",
-    "daddy",
-    "samui",
-    "seoul",
-    "city",
-    "chuanchuan",
-    "xitang",
-    "jeju"
+    {"classify": "wind", "img": "./img/gallery/gallery1.jpg"},
+    {"classify": "wind", "img": "./img/gallery/gallery2.jpg"},
+    {"classify": "wind", "img": "./img/gallery/gallery3.jpg"},
+    {"classify": "field", "img": "./img/gallery/gallery4.jpg"},
+    {"classify": "hometown", "img": "./img/gallery/gallery5.JPG"},
+    {"classify": "mounting", "img": "./img/gallery/gallery6.jpg"},
+    {"classify": "mounting", "img": "./img/gallery/gallery7.jpg"},
+    {"classify": "hometown", "img": "./img/gallery/gallery8.jpg"},
+    {"classify": "field", "img": "./img/gallery/gallery9.jpg"}
 ];
 
 // photos
-var photos = [
-    {
+var photos = {
+    "seven": {
         "img": [
             "http://opmpd352q.bkt.clouddn.com/7-1.jpg",
             "http://opmpd352q.bkt.clouddn.com/7-2",
@@ -107,7 +146,7 @@ var photos = [
             "<strong>：）</strong>"
         ]
     },
-    {
+    "daddy": {
         "img": [
             "http://opmpd352q.bkt.clouddn.com/album-1-1.jpg",
             "http://opmpd352q.bkt.clouddn.com/album-1-2.jpg",
@@ -142,24 +181,7 @@ var photos = [
             ""
         ]
     },
-    {
-        "img": [
-            "http://opmpd352q.bkt.clouddn.com/album-2-5.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-2-2.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-2-4.jpg"
-        ],
-        "title": [
-            "",
-            "",
-            ""
-        ],
-        "comment": [
-            "wedding door games",
-            "",
-            ""
-        ]
-    },
-    {
+    "jeju": {
         "img" : [
             "http://opmpd352q.bkt.clouddn.com/korea-1.jpg",
             "http://opmpd352q.bkt.clouddn.com/korea-2.jpg",
@@ -180,7 +202,7 @@ var photos = [
             "17:00pm<br/>说不定我一生涓滴意念 侥幸汇成河<br/>然后我俩各自一端<br/>望着大河弯弯 终于敢放胆<br/>嘻皮笑脸 面对人生的难"
         ]
     },
-    {
+    "city": {
         "img": [
             "http://opmpd352q.bkt.clouddn.com/album-4-1.jpg",
             "http://opmpd352q.bkt.clouddn.com/album-4-2.jpg",
@@ -205,50 +227,5 @@ var photos = [
             "是非成败转头空 青山依旧在 几度夕阳红",
             "莫名的情愫啊 请问谁来将它带走呢<br/>只好把岁月化成歌 留在山河"
         ]
-    },
-    {
-        "img": [
-            "http://opmpd352q.bkt.clouddn.com/album-5-1.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-5-2.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-5-3.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-5-4.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-5-5.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-5-6.jpg"
-        ],
-        "title": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
-        "comment": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    {
-        "img": [],
-        "title": [],
-        "comment": []
-    },
-    {
-        "img": [
-            "http://opmpd352q.bkt.clouddn.com/album-7-1.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-7-2.jpg"
-        ],
-        "title": [
-            "",
-            ""
-        ],
-        "comment": [
-            "<br/>把窗户打开吧 心情会好一点 这样我还能微笑着和你分别<br/>那是我最喜欢的唱片 你说那是一段音乐 却会让我在以后想念<br/>说着付出生命的誓言 回头看看繁华的世界<br/>爱你的每个瞬间像飞驰而过的地铁",
-            "<br/>海豚突然跃出海面<br/>我像个孩子一样背着相机直冲海边"
-        ]
     }
-];
+};
