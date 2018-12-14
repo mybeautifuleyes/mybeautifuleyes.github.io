@@ -201,8 +201,8 @@ var photos = {
     },
     "jeju": {
         "img" : [
-            "./img/album/7-1.jpg",
-            "./img/album/7-2.jpg"
+            "./img/album/album-7-1.jpg",
+            "./img/album/album-7-2.jpg"
         ],
         "title": [
             "海豚",
