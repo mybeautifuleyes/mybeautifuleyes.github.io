@@ -4,12 +4,12 @@
 
 // carousel
 var carousel = [
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-14.jpg", "content": '拯救地球好累，虽然有些疲惫但我还是会'},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-23.jpg", "content": ''},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-24.jpg", "content": ''},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-12.jpg", "content": '载着你仿佛载着阳光，不管到哪里都是晴天'},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-21.jpg", "content": ''},
-    {"img": "http://opmpd352q.bkt.clouddn.com/carousel-22.jpg", "content": ''}
+    {"img": "./img/album/carousel-14.jpg", "content": '拯救地球好累，虽然有些疲惫但我还是会'},
+    {"img": "./img/album/carousel-23.jpg", "content": ''},
+    {"img": "./img/album/carousel-24.jpg", "content": ''},
+    {"img": "./img/album/carousel-12.jpg", "content": '载着你仿佛载着阳光，不管到哪里都是晴天'},
+    {"img": "./img/album/carousel-21.jpg", "content": ''},
+    {"img": "./img/album/carousel-22.jpg", "content": ''}
 ];
 
 // album
@@ -25,7 +25,7 @@ var album_imgs = [
     },
     {
         "img": "./img/album/front-9.jpg",
-        "title": "Tokyo",
+        "title": "Tokyo Japan",
         "desc": "2018.05<br/>东京 - 五月天",
         "weather": "晴/雨",
         "count": "4",
@@ -34,7 +34,7 @@ var album_imgs = [
     },
     {
         "img": "./img/album/front-8.jpg",
-        "title": "Lombok - Gili T",
+        "title": "Lombok - Gili T Indonesia",
         "desc": "2018.03<br/>龙目 - T岛",
         "weather": "晴",
         "count": "4",
@@ -43,7 +43,7 @@ var album_imgs = [
     },
     {
         "img": "./img/album/front-10.jpg",
-        "title": "Koh Chang Island",
+        "title": "Koh Chang Thailand",
         "desc": "2017.10<br/>象岛",
         "weather": "晴",
         "count": "5",
@@ -88,7 +88,7 @@ var album_imgs = [
     },
     {
         "img": "./img/album/front-6.jpg",
-        "title": "Jeju Island Korea",
+        "title": "Jeju Korea",
         "desc": "2016.06<br/>After-graduation trip at Jeju Island",
         "weather": "小雨",
         "count": "2",
@@ -97,11 +97,11 @@ var album_imgs = [
     },
     {
         "img": "./img/album/front-7.jpg",
-        "title": "7",
-        "desc": "申十七",
-        "weather": "",
-        "count": "",
-        "star": "",
+        "title": "申十七",
+        "desc": "仅用此祝生日快乐",
+        "weather": "<i class='fa fa-sun-o'></i>",
+        "count": "3",
+        "star": "<i class='fa fa-birthday-cake'></i><i class='fa fa-birthday-cake'></i>",
         "id": "seven"
     }
 ];
@@ -131,32 +131,50 @@ var gallery_imgs = [
 var photos = {
     "seven": {
         "img": [
-            "http://opmpd352q.bkt.clouddn.com/7-1.jpg",
-            "http://opmpd352q.bkt.clouddn.com/7-2",
-            "http://opmpd352q.bkt.clouddn.com/7-3"
         ],
         "title": [
-            "",
-            "",
-            ""
         ],
         "comment": [
-            "<strong>申十七</strong>",
-            "生日快乐",
-            "<strong>：）</strong>"
+        ]
+    },
+    "seoul": {
+        "img": [
+            "./img/album/album-3-1.jpg",
+            "./img/album/album-3-2.jpg",
+            "./img/album/album-3-3.jpg",
+            "./img/album/album-3-4.jpg",
+            "./img/album/album-3-5.jpg",
+            "./img/album/album-3-6.jpg",
+            "./img/album/album-3-7.jpg",
+            "./img/album/album-3-8.jpg",
+            "./img/album/album-3-9.jpg"
+        ],
+        "title": [
+        ],
+        "comment": [
+        ]
+    },
+    "samui": {
+        "img": [
+            "./img/album/album-2-5.jpg"
+        ],
+        "title": [
+            "chinese wedding door games"
+        ],
+        "comment": [
         ]
     },
     "daddy": {
         "img": [
-            "http://opmpd352q.bkt.clouddn.com/album-1-1.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-1-2.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-1-3.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-1-4.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-1-5.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-1-6.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-1-7.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-1-8.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-1-9.jpg"
+            "./img/album/album-1-1.jpg",
+            "./img/album/album-1-2.jpg",
+            "./img/album/album-1-3.jpg",
+            "./img/album/album-1-4.jpg",
+            "./img/album/album-1-5.jpg",
+            "./img/album/album-1-6.jpg",
+            "./img/album/album-1-7.jpg",
+            "./img/album/album-1-8.jpg",
+            "./img/album/album-1-9.jpg"
         ],
         "title": [
             "张北草原天路",
@@ -183,33 +201,26 @@ var photos = {
     },
     "jeju": {
         "img" : [
-            "http://opmpd352q.bkt.clouddn.com/korea-1.jpg",
-            "http://opmpd352q.bkt.clouddn.com/korea-2.jpg",
-            "http://opmpd352q.bkt.clouddn.com/korea-3.jpg",
-            "http://opmpd352q.bkt.clouddn.com/korea-4.jpg",
-            "http://opmpd352q.bkt.clouddn.com/korea-5.jpg"
+            "./img/album/album-7-1.jpg",
+            "./img/album/album-7-2.jpg"
         ],
         "title": [
             "",
-            "",
-            ""
+            "海豚"
         ],
         "comment" : [
-            "9:00am<br/>初恋的香味就这样被我们寻回<br/>那温暖的阳光 像刚摘的鲜艳草莓<br/>你说妳舍不得吃掉这一种感觉",
             "",
-            "13:00pm<br/>红灯停 绿灯行<br/>我从远方赶来 恰巧你们也在 痴迷流连人间 我为她而狂野",
-            "",
-            "17:00pm<br/>说不定我一生涓滴意念 侥幸汇成河<br/>然后我俩各自一端<br/>望着大河弯弯 终于敢放胆<br/>嘻皮笑脸 面对人生的难"
+            "海边偶遇"
         ]
     },
     "city": {
         "img": [
-            "http://opmpd352q.bkt.clouddn.com/album-4-1.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-4-2.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-4-3.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-4-4.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-4-5.jpg",
-            "http://opmpd352q.bkt.clouddn.com/album-4-6.jpg"
+            "./img/album/album-4-1.jpg",
+            "./img/album/album-4-2.jpg",
+            "./img/album/album-4-3.jpg",
+            "./img/album/album-4-4.jpg",
+            "./img/album/album-4-5.jpg",
+            "./img/album/album-4-6.jpg"
         ],
         "title": [
             "上海",

@@ -1,6 +1,6 @@
 body{
     height: 100%;
-    background: url(http://opmpd352q.bkt.clouddn.com/background_2.jpg) no-repeat right bottom fixed;
+    background: url(../img/background_2.jpg) no-repeat right bottom fixed;
     position: relative;
     padding-top: 10px;
     z-index: -2;
