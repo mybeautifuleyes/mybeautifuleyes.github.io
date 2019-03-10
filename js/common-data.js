@@ -120,7 +120,7 @@ var gallery_imgs = [
     {"classify": "wind", "img": "./img/gallery/gallery2.jpg"},
     {"classify": "wind", "img": "./img/gallery/gallery3.jpg"},
     {"classify": "field", "img": "./img/gallery/gallery4.jpg"},
-    {"classify": "hometown", "img": "./img/gallery/gallery5.JPG"},
+    {"classify": "hometown", "img": "./img/gallery/gallery5.jpg"},
     {"classify": "mounting", "img": "./img/gallery/gallery6.jpg"},
     {"classify": "mounting", "img": "./img/gallery/gallery7.jpg"},
     {"classify": "hometown", "img": "./img/gallery/gallery8.jpg"},
