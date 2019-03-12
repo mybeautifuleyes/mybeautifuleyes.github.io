@@ -11,7 +11,7 @@ a{
 }
 header h1{
 	margin:10px 0 0 20px;
-	font-size:100px;
+	font-size:80px;
 	text-transform:uppercase;
 	text-shadow:0px 0px 1px #fff;
 	color:#444;
@@ -26,7 +26,7 @@ header span{
 }
 .iw_wrapper{
 	width:70%;
-	margin:30px auto 100px auto;
+	margin:30px auto 50px auto;
 	position:relative;
 }
 ul.iw_thumbs li{
@@ -77,19 +77,19 @@ ul.iw_thumbs li img:hover{
 	box-shadow:1px 1px 7px #777;
 }
 ul.iw_thumbs li:nth-child(even) img{
-	height:20px;
-}
-ul.iw_thumbs li:nth-child(odd) img{
 	height:40px;
 }
+ul.iw_thumbs li:nth-child(odd) img{
+	height:60px;
+}
 ul.iw_thumbs li:nth-child(5n) img{
-	height:70px;
+	height:90px;
 }
 ul.iw_thumbs li:nth-child(6n) img{
-	height:110px;
+	height:140px;
 }
 ul.iw_thumbs li:nth-child(7n) img{
-	height:20px;
+	height:30px;
 }
 .iw_ribbon{
 	position:fixed;
