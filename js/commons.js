@@ -1,6 +1,22 @@
 /**
  * Created by Liye on 2017/5/30.
+ * 1. some common functions
+ * 2. img url
  */
+
+/* get params */
+function getUrlParams() {
+    var url = String(window.document.location.href);
+    var params = {};
+    var count = 0;
+    url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
+        params[key] = value;
+        count = count + 1;
+    });
+    params['length'] = count;
+    return params;
+}
+
 
 // carousel
 var carousel = [
