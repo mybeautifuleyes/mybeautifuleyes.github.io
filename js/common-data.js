@@ -4,12 +4,31 @@
 
 // carousel
 var carousel = [
-    {"img": "./img/album/carousel-14.jpg", "content": '拯救地球好累，虽然有些疲惫但我还是会'},
-    {"img": "./img/album/carousel-23.jpg", "content": ''},
-    {"img": "./img/album/carousel-24.jpg", "content": ''},
-    {"img": "./img/album/carousel-12.jpg", "content": '载着你仿佛载着阳光，不管到哪里都是晴天'},
-    {"img": "./img/album/carousel-21.jpg", "content": ''},
-    {"img": "./img/album/carousel-22.jpg", "content": ''}
+    {
+		"img": "img/carousel/c1_760x400.jpg", 
+		"content": '<顽固> 鼻青脸肿的哭过／若无其事的忘记', 
+		"title": 'Beautiful Eyes, a private site of world wonderful photos.'
+	},
+    {
+		"img": "img/carousel/c2_760x400.jpg", 
+		"content": '<晴天> rui sou sou xi dou xi la／sou la xi xi xi xi la xi la sou',
+		"title": 'Whisper - 李美丽是一只傻猫'
+	},
+    {
+		"img": "img/carousel/c3_760x400.jpg", 
+		"content": '<倔强> 我就是我自己的神／在我活的地方',
+		"title":'Album - 被分类的照片集合',
+	},
+    {
+		"img": "img/carousel/c4_760x400.jpg", 
+		"content": '<理想> 梦醒后/还是依然奔波在风雨的街头／有时候想哭就把泪 咽进一腔热血的胸口',
+		"title":'Gallery - 主题照片展览',
+	},
+    {
+		"img": "img/carousel/c5_760x400.jpg", 
+		"content": '<步步> 如果相识／不能相恋／是不是还不如擦肩',
+		"title": '<i class="fa fa-envelope-open-o"></i>&nbsp; Contact me<mark>联系英俊帅气潇洒的我</mark>'
+	},
 ];
 
 // album
@@ -20,9 +39,18 @@ var album_imgs = [
         "desc": "2013退休至今<br/>爸爸的摄影集",
         "weather": "晴/雨/多云",
         "count": "8",
-        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
         "id": "daddy"
     },
+	{
+	    "img": "./img/album/front-Serbia.jpg",
+	    "title": "Belgrade Sebia&Kotor Montenegro",
+	    "desc": "2019.10<br/>东欧行",
+	    "weather": "晴/小雨",
+	    "count": "9",
+	    "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+	    "id": "daddy"
+	},
     {
         "img": "./img/album/front-9.jpg",
         "title": "Tokyo Japan",
@@ -92,10 +120,10 @@ var album_imgs = [
         "desc": "2016.06<br/>After-graduation trip at Jeju Island",
         "weather": "小雨",
         "count": "2",
-        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "star": "<i class='fa fa-star'></i>".repeat(3),
         "id": "jeju"
     },
-    {
+    /* {
         "img": "./img/album/front-7.jpg",
         "title": "申十七",
         "desc": "仅用此祝生日快乐",
@@ -103,7 +131,7 @@ var album_imgs = [
         "count": "3",
         "star": "<i class='fa fa-birthday-cake'></i><i class='fa fa-birthday-cake'></i>",
         "id": "seven"
-    }
+    } */
 ];
 
 // gallery
@@ -201,15 +229,12 @@ var photos = {
     },
     "jeju": {
         "img" : [
-            "./img/album/album-7-1.jpg",
             "./img/album/album-7-2.jpg"
         ],
         "title": [
-            "",
             "海豚"
         ],
         "comment" : [
-            "",
             "海边偶遇"
         ]
     },

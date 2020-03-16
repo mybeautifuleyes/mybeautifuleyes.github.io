@@ -58,60 +58,10 @@
     <div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 3px">
             <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-
-                <div class="item active">
-                    <img src="img/c1_760x400.jpg">
-                    <div class="carousel-caption">
-                        <p class="small"><i class="fa fa-envelope-open-o"></i>&nbsp; 鼻青脸肿的哭过／若无其事的忘记
-                            <br/><a class="label label-primary" href="#">顽固</a></p>
-                    </div>
-                </div><!-- End Item -->
-
-                <div class="item">
-                    <img src="./img/c2_760x400.jpg">
-                    <div class="carousel-caption">
-                        <p class="small">rui sou sou xi dou xi la／sou la xi xi xi xi la xi la sou
-                            <br/><a class="label label-primary smooth-scroll" href="#about">晴天</a></p>
-                    </div>
-                </div><!-- End Item -->
-
-                <div class="item">
-                    <img src="./img/c3_760x400.jpg">
-                    <div class="carousel-caption">
-                        <p class="small"><i class="fa fa-envelope-open-o"></i>&nbsp; 我就是我自己的神／在我活的地方
-                            <br/><a class="label label-primary smooth-scroll" href="#projects">倔强</a></p>
-                    </div>
-                </div><!-- End Item -->
-
-                <div class="item">
-                    <img src="./img/c4_760x400.jpg">
-                    <div class="carousel-caption">
-                        <p class="small"><i class="fa fa-envelope-open-o"></i>&nbsp; 梦醒后 还是依然奔波在风雨的街头／有时候想哭就把泪 咽进一腔热血的胸口
-                            <br/><a class="label label-primary smooth-scroll" href="#gallery">理想</a></p>
-                    </div>
-                </div><!-- End Item -->
-
-                <div class="item">
-                    <img src="./img/c5_760x400.jpg">
-                    <div class="carousel-caption">
-                        <p class="small"><i class="fa fa-envelope-open-o"></i>&nbsp;
-                            ／如果相识／不能相恋／是不是还不如擦肩
-                            <br/><a class="label label-primary smooth-scroll" href="#contact">步步</a></p>
-                    </div>
-                </div><!-- End Item -->
-
-            </div><!-- End Carousel Inner -->
-
-
-            <ul class="list-group col-sm-4">
-                <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Beautiful Eyes, a private site of world wonderful photos.</h4></li>
-                <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Whisper - 李美丽的杂七杂八</h4></li>
-                <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Album - 被分类的照片集合</h4></li>
-                <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>Gallery - 主题照片展览</h4></li>
-                <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4><i class="fa fa-envelope-open-o"></i>&nbsp; Contact me<mark>联系英俊帅气潇洒的我</mark></h4></li>
-            </ul>
-
+            <div class="carousel-inner" id="myCarouselImgs">
+            </div>
+            <ul class="list-group col-sm-4" id="myCarouselTitle">
+			</ul>
             <!-- Controls -->
             <div class="carousel-controls">
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -302,14 +252,45 @@
 
     <!-- comment -->
     <div class="container-comment">
-        <div class="page-header" id="comment">
-            <h2 class="text-center text-warning"><span class="fa fa-commenting-o"></span> COMMENT</h2>
-            <p class="text-center text-warning" id="message">评论功能开放啦：)</p>
-        </div>
-
-        <div class="container">
+        <!-- <div class="container">
             <div id="SOHUCS" sid="index"></div>
-        </div>
+        </div> -->
+		<div class="container">
+			<div class="page-header" id="comment">
+			    <h2 class="text-center text-warning"><span class="fa fa-commenting-o"></span> COMMENT</h2>
+			    <p class="text-center text-warning" id="message">评论功能暂时关闭啦！</p>
+			</div>
+			
+			<div class="panel panel-default">
+			  <div class="panel-body">
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <img class="media-object" src="img/comment/comment_2.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="media-body">
+				    <h4 class="media-heading">李美丽真身</h4>
+				    之前的评论系统是接入第三方应用，畅言的广告实在有点讨厌，之后自己写一个吧！<br/>
+				    定个目标，今年上半年完成！<br/>
+				    --- FLAG <br/>
+					
+					<div class="media">
+					  <div class="media-left">
+					    <a href="#">
+					      <img class="media-object" src="img/comment/comment_3.jpg" alt="...">
+					    </a>
+					  </div>
+					  <div class="media-body">
+					    <h4 class="media-heading">"美丽2号"回复：李美丽真身</h4>
+					    请时刻牢记FLAG！
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
     </div>
 
     <footer id="footer" class="clearfix">
@@ -345,6 +326,7 @@
     <script src="js/modules/gallery.js"></script>
     <script src="js/modules/comment.js"></script>
 
+	<!-- 关闭评论功能 -->
     <script type="text/javascript">
         jQuery(function($) {
             // Lazy load static img
@@ -399,13 +381,14 @@
         };
 
         // load comment
-        (function(){
+        /* (function(){
             var appid = 'cyt0RkGlD';
             var conf = 'prod_c450013909ca7a621306edf50f9d1a2b';
             var width = window.innerWidth || document.documentElement.clientWidth;
             if (width < 960) {
                 window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
-    </script>
+    */
+	</script>
 
 </body>
 </html>
