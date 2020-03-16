@@ -9,7 +9,7 @@
 var carousel_id = 'myCarouselImgs';
 var carousel_html = init_carousel();
 $('#' + carousel_id).html(carousel_html);
-$('#myCarouselTitle').html(init_carousel_title());
+// $('#myCarouselTitle').html(init_carousel_title());
 
 function init_carousel() {
 	let item = "";
@@ -32,5 +32,6 @@ function init_carousel_title() {
 		let item_class = index == 0?'list-group-item active':'list-group-item';
 		html += '<li data-target="#myCarousel" data-slide-to="' + index + '" class="' + item_class + '"><h4>' + title + '</h4></li>';
 	}
+	console.log(html);
 	return html;
 }
