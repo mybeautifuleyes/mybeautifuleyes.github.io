@@ -12,7 +12,7 @@ comments = [
     {
         "pic": "./img/comment/comment_6.jpg",
         "content": "虽然云存储挂了，丢了很多照片，但是，<strong>我回来了！</strong>",
-        "name": "李肥猫",
+        "name": "李美丽",
         "time": "2018-12-13 16:24"
     },
     {
@@ -44,7 +44,13 @@ comments = [
         "content": '<ul><li><a href="http://www.paperang.cn/" target="_blank">喵喵机</a></li><li><a href="http://c.b0yp.com/h.TFaVBM?cv=EXThZGrxuFc&sm=c94703" target="_blank"> 世界这么大 带你吃遍它</a></li><li><a href="http://www.reflower.com.cn/" target="_blank"> 花点时间：每周一花的小幸福</a></li></ul>',
         "name": "好物推荐",
         "time": "2017-10-14 23:00"
-    }
+    },
+	{
+	    "pic": "./img/comment/comment_6.jpg",
+	    "content": '<a href="susususuri.html" target="_blank">这里是个秘密</a>',
+	    "name": "李美丽",
+	    "time": "2020-03-16 21:00"
+	},
 ];
 
 var init_comment_count = 4;

@@ -43,6 +43,7 @@ function init_normal_style_photo(current_row){
             photo_html += '<small><i class="fa fa-music"></i>&nbsp;' + photos[album].comment[i] + '</small>';
         }
 
+		let big_img = (photos[album].big && photos[album].big[i]) ? photos[album].big[i] : photos[album].img[i];
         photo_html += '</div>' +
             // caption
             '<div class="caption">' +
@@ -50,7 +51,7 @@ function init_normal_style_photo(current_row){
             '<div class="caption-text">' +
             '<button type="button" class="btn btn-default btn-circle btn-layer" onclick="button_click()">' +
             '<i class="fa fa-heart-o faa-pulse animated"></i></button>' +
-            '<a href="' + photos[album].img[i] + '" class="img-wrapper">' +
+            '<a href="' + big_img + '" class="img-wrapper">' +
             '<button type="button" class="btn btn-info btn-circle btn-layer">' +
             '<i class="fa fa-photo faa-float animated"></i></button></a>' +
             '</div></div>' +
@@ -71,14 +72,9 @@ function init_normal_style_photo(current_row){
 function pagination_click(page) {
     $(".pagination li:eq(page) a").addClass("active");
     $("#page2").addClass("active");
-
-    console.log("in");
-    console.log($(".pagination li:eq(page) a").addClass("active"));
 }
 
 function button_click() {
-    console.log("in");
-    console.log("-" + $(this).attr("class"));
     $(this).addClass("btn-warning").removeClass("btn-default");
     $("this i").removeClass("fa-heart-o").addClass("fa-heart");
 }

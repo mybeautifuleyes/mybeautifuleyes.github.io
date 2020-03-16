@@ -36,7 +36,7 @@ var carousel = [
 		"title":'Album - 被分类的照片集合',
 	},
     {
-		"img": "img/carousel/c4_760x400.jpg", 
+		"img": "img/carousel/5.jpeg", 
 		"content": '<理想> 梦醒后/还是依然奔波在风雨的街头／有时候想哭就把泪 咽进一腔热血的胸口',
 		"title":'Gallery - 主题照片展览',
 	},
@@ -54,8 +54,8 @@ var album_imgs = [
         "title": "摄影集",
         "desc": "2013退休至今<br/>爸爸的摄影集",
         "weather": "晴/雨/多云",
-        "count": "8",
-        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
+        "count": "9",
+        "star": "<i class='fa fa-star'></i>".repeat(5),
         "id": "daddy"
     },
 	{
@@ -63,9 +63,9 @@ var album_imgs = [
 	    "title": "Belgrade Sebia&Kotor Montenegro",
 	    "desc": "2019.10<br/>东欧行",
 	    "weather": "晴/小雨",
-	    "count": "9",
-	    "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>",
-	    "id": "daddy"
+	    "count": "8",
+	    "star": "<i class='fa fa-star'></i>".repeat(6),
+	    "id": "sebia"
 	},
     {
         "img": "./img/album/front-9.jpg",
@@ -173,9 +173,27 @@ var gallery_imgs = [
 
 // photos
 var photos = {
-    "seven": {
+    "sebia": {
         "img": [
+			"img/album/sebia/s - 1.png",
+			"img/album/sebia/s - 2.png",
+			"img/album/sebia/s - 3.png",
+			"img/album/sebia/s - 4.png",
+			"img/album/sebia/s - 5.png",
+			"img/album/sebia/s - 6.png",
+			"img/album/sebia/s - 7.png",
+			"img/album/sebia/s - 8.png",
         ],
+		"big": [
+			"img/album/sebia/l - 1.png",
+			"img/album/sebia/l - 2.png",
+			"img/album/sebia/l - 3.png",
+			"img/album/sebia/l - 4.png",
+			"img/album/sebia/l - 5.png",
+			"img/album/sebia/l - 6.png",
+			"img/album/sebia/l - 7.png",
+			"img/album/sebia/l - 8.png",
+		],
         "title": [
         ],
         "comment": [
