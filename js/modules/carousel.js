@@ -8,7 +8,7 @@
  */
 var carousel_id = 'myCarouselImgs';
 var carousel_html = init_carousel();
-$('#' + carousel_id).html(carousel_html);
+// $('#' + carousel_id).html(carousel_html);
 // $('#myCarouselTitle').html(init_carousel_title());
 
 function init_carousel() {
