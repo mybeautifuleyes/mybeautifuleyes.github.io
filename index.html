@@ -21,6 +21,10 @@
     <link href="css/comment.css" rel="stylesheet">
     <link href="css/active-button.css" rel="stylesheet">
     <link href="css/carousel.css" rel="stylesheet">
+	
+	<!-- gitalk -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
     <!-- css shake -->
     <link rel="stylesheet" type="text/css" href="css/csshake.min.css">
@@ -58,10 +62,15 @@
     <div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 3px">
             <!-- Wrapper for slides -->
-            <div class="carousel-inner" id="myCarouselImgs">
+            <div class="carousel-inner">
+				<div class="carousel-inner" id="myCarouselImgs"></div>
             </div>
             <ul class="list-group col-sm-4" id="myCarouselTitle">
-				<li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Beautiful Eyes, a private site of world wonderful photos.</h4></li><li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Whisper - 李美丽是一只傻猫</h4></li><li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Album - 被分类的照片集合</h4></li><li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>Gallery - 主题照片展览</h4></li><li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4><i class="fa fa-envelope-open-o"></i>&nbsp; Contact me<mark>联系英俊帅气潇洒的我</mark></h4></li>
+				<li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Beautiful Eyes, a private site of world wonderful photos.</h4></li>
+				<li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>About - 李美丽是一只傻猫</h4></li>
+				<li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Album - 被分类的照片集合</h4></li>
+				<li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>Gallery - 主题照片展览</h4></li>
+				<li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4><i class="fa fa-envelope-open-o"></i>&nbsp; Contact me<mark>联系英俊帅气潇洒的我</mark></h4></li>
 			</ul>
             <!-- Controls -->
             <div class="carousel-controls">
@@ -292,6 +301,8 @@
 				</div>
 			  </div>
 			</div>
+		
+			<div id="gitalk-container" style="min-height: 200px;"></div>
 		</div>
     </div>
 
@@ -383,13 +394,17 @@
         };
 
         // load comment
-        /* (function(){
-            var appid = 'cyt0RkGlD';
-            var conf = 'prod_c450013909ca7a621306edf50f9d1a2b';
-            var width = window.innerWidth || document.documentElement.clientWidth;
-            if (width < 960) {
-                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
-    */
+        var gitalk = new Gitalk({
+          clientID: 'c6b590b73697b90483b2',
+          clientSecret: 'f22004def7645525faf46d15d8e8e374358fb97d',
+          repo: 'website-comment',
+          owner: 'mybeautifuleyes',
+          admin: ['mybeautifuleyes', 'SkipToYourSoul'],
+          id: 'index.html',      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false  // Facebook-like distraction free mode
+        });
+        
+        gitalk.render('gitalk-container');
 	</script>
 
 </body>

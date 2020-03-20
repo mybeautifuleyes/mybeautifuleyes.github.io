@@ -21,7 +21,7 @@ function init_carousel() {
 		item += '<div class="' + item_class + '"><img src="' + img_path + '"><div class="carousel-caption">' 
 			+ '<p class="small"><i class="fa fa-envelope-open-o"></i>&nbsp; ' + img_content + '</p></div></div>';
 	}
-	return '<div class="carousel-inner">' + item + '</div>';
+	return item;
 }
 
 function init_carousel_title() {
